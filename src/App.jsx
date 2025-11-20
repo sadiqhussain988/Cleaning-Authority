@@ -4,11 +4,13 @@ import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Header from "./components/common/Header";
 
 
 const MainLayout = () => {
   return (
     <div>
+      <Header/>
       <Navbar/>
       <Outlet /> 
       <Footer/>
