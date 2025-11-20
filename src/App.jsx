@@ -4,6 +4,8 @@ import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import WhyHireUs from "./pages/WhyHireUs";
+import DetailCleanRotationSystem from "./pages/DetailCleanRotationSystem";
 import Header from "./components/common/Header";
 
 

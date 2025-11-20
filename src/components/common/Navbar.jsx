@@ -51,7 +51,7 @@ const Navbar = () => {
       dropdown: [
         {
           title: "Detail-Clean Rotation System",
-          link: "/why-hire-us-/detail-clean-rotation-system/",
+          link: "/detail-clean-rotation-system",
         },
         { title: "Green Cleaning", link: "/why-hire-us-/green-cleaning/" },
         {
