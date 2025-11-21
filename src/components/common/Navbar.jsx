@@ -123,9 +123,9 @@ const Navbar = () => {
     },
 
     { title: "Blog", link: "/articles/" },
-    { title: "FAQs", link: "/faqs/" },
+    { title: "FAQs", link: "/faq" },
     { title: "Jobs", link: "/cleaning-jobs/" },
-    { title: "Special Offers", link: "/irvine/special-offers/" },
+    { title: "Special Offers", link: "/special-offers" },
   ];
 
   return (
