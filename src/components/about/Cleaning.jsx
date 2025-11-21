@@ -17,8 +17,8 @@ export default function Cleaning() {
   const contactBlue = '#2a8bdc';
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-12">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start pt-15">
+    <section className="max-w-7xl mx-auto px-5 mb-10 py-5 md:py-0">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start ">
 
        {/* LEFT CONTENT */}
 <div className="pt-2">

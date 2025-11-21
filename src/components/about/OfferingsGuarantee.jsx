@@ -13,8 +13,8 @@ export default function OfferingsGuarantee() {
   const contactBlue = '#2a8bdc';
 
   return (
-    <div className="bg-[#DFEEF5] overflow-hidden">
-      <section className="max-w-7xl mx-auto px-6 py-16 overflow-hidden">
+    <div className="bg-[#DFEEF5] overflow-hidden md:5 md:mb-10">
+      <section className="max-w-7xl mx-auto px-5 md:px-6 py-10 md:py-16 overflow-hidden">
         {/* Centered Heading */}
         <h2
           data-aos="fade-down"
