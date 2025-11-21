@@ -4,6 +4,7 @@ import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import BlogPage from "./pages/BlogPage";
 
 
 const MainLayout = () => {
@@ -22,6 +23,9 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home/> },
       { path: "/about", element: <About/> },
+       { path: "/blog", element: <BlogPage /> },               // All blogs
+      { path: "/blog/:category", element: <BlogPage /> },     // Optional: category view
+      { path: "/blog/:category/:slug", element: <BlogPage /> }, // Blog detail
       
     ],
   },
