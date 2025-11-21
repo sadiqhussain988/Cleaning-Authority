@@ -1,21 +1,12 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 
 export default function ContactExperienceSection() {
-  useEffect(() => {
-    AOS.init({ duration: 800, once: true });
-  }, []);
-
   return (
     <section className="w-full py-16 bg-white overflow-x-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 px-6 lg:px-12 items-center">
 
         {/* LEFT IMAGE */}
-        <div
-          className="w-full rounded-md overflow-hidden group"
-          data-aos="fade-right"
-        >
+        <div className="w-full rounded-md overflow-hidden group">
           <img
             src="https://www.thecleaningauthority.com/assets/content/mother-daughter-mobile.2012151513550.jpg"
             alt="Happy family on couch"
@@ -24,35 +15,29 @@ export default function ContactExperienceSection() {
         </div>
 
         {/* RIGHT CONTENT */}
-        <div data-aos="fade-left">
+        <div>
           <h2 className="text-4xl font-semibold leading-tight mb-6">
             When You Contact Us, You Can <br /> Experience the Following:
           </h2>
 
           {/* BULLET LIST */}
           <ul className="space-y-3 text-lg">
-            <li className="flex items-start" data-aos="fade-left" data-aos-delay="150">
+            <li className="flex items-start">
               <span className="text-green-600 text-2xl mr-3">✔</span>
               Cleaning performed with environmentally responsible products
             </li>
-
-            <li className="flex items-start" data-aos="fade-left" data-aos-delay="250">
+            <li className="flex items-start">
               <span className="text-green-600 text-2xl mr-3">✔</span>
               House cleaners who are fully bonded and insured
             </li>
-
-            <li className="flex items-start" data-aos="fade-left" data-aos-delay="350">
+            <li className="flex items-start">
               <span className="text-green-600 text-2xl mr-3">✔</span>
               Service from a locally owned and operated company in Irvine
             </li>
           </ul>
 
           {/* CONTACT BOX */}
-          <div
-            className="bg-[#E4F1F8] mt-8 p-6 rounded-md flex items-center justify-between transition-transform duration-300 group-hover:scale-105 group-hover:opacity-70"
-            data-aos="zoom-in"
-            data-aos-delay="400"
-          >
+          <div className="bg-[#E4F1F8] mt-8 p-6 rounded-md flex items-center justify-between transition-transform duration-300 group-hover:scale-105 group-hover:opacity-70">
             <div className="text-lg leading-relaxed">
               <p className="font-semibold">
                 Contact Us Today at{" "}
@@ -80,11 +65,7 @@ export default function ContactExperienceSection() {
           </div>
 
           {/* PARAGRAPH */}
-          <p
-            className="mt-8 text-lg leading-relaxed text-gray-700"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
+          <p className="mt-8 text-lg leading-relaxed text-gray-700">
             Our owners are 20 year residents of Irvine and look forward to making
             your home, as well as the community, healthier. That is why we are
             committed to using environmentally-responsible cleaning products, such
