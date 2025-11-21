@@ -6,6 +6,10 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import WhyHireUs from "./pages/WhyHireUs";
 import DetailCleanRotationSystem from "./pages/DetailCleanRotationSystem";
+import GreenCleaning from "./pages/GreenCleaning";
+import SatisfactionGuaranted from "./pages/SatisfactionGuaranted";
+import CleaningFrequencies from "./pages/CleaningFrequencies";
+import BondedAndInsured from "./pages/BondedAndInsured";
 
 
 const MainLayout = () => {
@@ -26,6 +30,10 @@ const router = createBrowserRouter([
       { path: "/about", element: <About/> },
       { path: "/why-hire-us", element: <WhyHireUs/>},
       { path: "/detail-clean-rotation-system", element: <DetailCleanRotationSystem/>},
+      { path: "/green-cleaning", element: <GreenCleaning/>},
+      { path: "/satisfaction-guaranted", element: <SatisfactionGuaranted/>},
+      { path: "/cleaning-frequencies", element: <CleaningFrequencies/>},
+      { path: "/bonded-and-insured", element: <BondedAndInsured/>},
       
     ],
   },

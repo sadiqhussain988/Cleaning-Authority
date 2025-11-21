@@ -8,6 +8,11 @@ import { Link } from 'react-router-dom';
 
 const AuthorityBrands = () => {
   const brands = [
+    { src: "/images/asp.png", alt: "Asp", path:"https://www.asppoolco.com/" },
+    { src: "/images/ben-franklin.png", alt: "Benjamin Franklin", path:"https://www.benjaminfranklinplumbing.com/" },
+    { src: "/images/TCA.png", alt: "Cleaning Authority", path:"https://www.thecleaningauthority.com/#~6394d625-1406-4d9b-be3c-f39260293a87" },
+    { src: "/images/DoodyCalls.png", alt: "Doody Calls", path:"https://www.doodycalls.com/" },
+
     { src: "/images/Drymedic-Logo.png", alt: "Drymedic", path:"https://www.drymedic.com/" },
     { src: "/images/homewatch.png", alt: "Homewatch",path:"https://www.homewatchcaregivers.com/" },
     { src: "/images/JNK.png", alt: "JNK" ,path:"https://www.junkluggers.com/" },
@@ -15,20 +20,24 @@ const AuthorityBrands = () => {
     { src: "/images/miskySpark.png", alt: "Misky Spark" , path:"https://www.mistersparky.com/" },
     { src: "/images/monster.png", alt: "Monster" ,path:"https://www.monstertreeservice.com/" },
     { src: "/images/msq.png", alt: "MSQ" , path:"https://www.mosquitosquad.com/" },
+    { src: "/images/one-hour.png", alt: "One Hour" , path:"https://www.mosquitosquad.com/" },
+    { src: "/images/SM.png", alt: "Screen Mobile" , path:"https://www.screenmobile.com/" },
+    { src: "/images/STOP.png", alt: "STOP" , path:"https://www.stoprestoration.com/" },
+    { src: "/images/woofies.png", alt: "Woofies" , path:"https://www.woofies.com/" },
   ];
 
  const swiperConfig = {
   modules: [Autoplay, FreeMode],
   autoplay: {
-    delay: 1,
+    delay:0.8,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   },
-  speed: 5000,
+  speed:2000,
   loop: true,
   slidesPerView: 'auto',
   freeMode: true,
-  spaceBetween: 50, // default for desktop
+  spaceBetween: 20, // default for desktop
   breakpoints: {
     0: {       // from 0px up
       spaceBetween: 5,
@@ -45,7 +54,7 @@ const AuthorityBrands = () => {
 
 
   return (
-    <div className="bg-gray-50 py-16 px-4 rounded-2xl ">
+    <div className="bg-gray-50 py-16 px-4  rounded-2xl ">
       <div className="max-w-7xl mx-auto">
         <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-12">
         Part of the Authority Brands Family
@@ -61,7 +70,7 @@ const AuthorityBrands = () => {
                 <img 
                   src={brand.src} 
                   alt={brand.alt}
-                  className="h-12 max-w-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                  className="h-12 max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                   onError={(e) => {
                     e.target.style.display = 'none';
                   }}
