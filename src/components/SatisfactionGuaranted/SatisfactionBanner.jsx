@@ -7,7 +7,7 @@ return ( <section className="relative w-full h-[28rem] md:h-[30rem] lg:h-[32rem]
   {/* Background Image with Overlay */}
   <div className="absolute inset-0 w-full h-full overflow-hidden">
     <img
-      src="images/Satisfaction-Guaranteed.jpg"
+      src="/images/Satisfaction-Guaranteed.jpg"
       alt="Satisfaction Guaranteed"
       loading="lazy"
       className="w-full h-full object-cover object-center transform transition-transform duration-[1500ms] ease-out group-hover:scale-110"

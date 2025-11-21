@@ -2,9 +2,7 @@ import React from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Header from "./components/common/Header";
 import Navbar from "./components/common/Navbar";
-import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
-import Header from "./components/common/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Faq from "./pages/Faq";
@@ -43,9 +41,9 @@ const router = createBrowserRouter([
       { path: "/why-hire-us", element: <WhyHireUs/>},
       { path: "/detail-clean-rotation-system", element: <DetailCleanRotationSystem/>},
       { path: "/green-cleaning", element: <GreenCleaning/>},
-      { path: "/satisfaction-guaranted", element: <SatisfactionGuaranted/>},
+      { path: "/satisfaction-guaranteed", element: <SatisfactionGuaranted/>},
       { path: "/cleaning-frequencies", element: <CleaningFrequencies/>},
-      { path: "/bonded-and-insured", element: <BondedAndInsured/>},
+      { path: "/bonded-insured", element: <BondedAndInsured/>},
       
     ],
   },

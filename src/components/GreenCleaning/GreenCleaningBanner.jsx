@@ -7,7 +7,7 @@ const GreenCleaningBanner = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="images/green-cleaning-banner.jpg"
+          src="/images/green-cleaning-banner.jpg"
           alt="Green Cleaning Background"
           className="w-full h-full object-cover object-center brightness-[1] parallax-element"
           loading="lazy"

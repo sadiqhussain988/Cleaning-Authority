@@ -8,7 +8,7 @@ export default function InsuredBanner() {
       <div className="w-full lg:w-2/3 h-[300px] md:h-[400px] lg:h-auto relative overflow-hidden">
         {/* Image with Enhanced Styling */}
         <img
-          src="images/Locally-Owned.jpg"
+          src="/images/Locally-Owned.jpg"
           alt="Banner"
           className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
           loading="lazy"

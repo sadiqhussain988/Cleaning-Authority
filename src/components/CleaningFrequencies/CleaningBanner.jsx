@@ -40,7 +40,7 @@ export default function CleaningBanner() {
           <div className="relative overflow-hidden group animate-slideRight rounded-2xl">
 
             <img
-              src="images/cleaning-banner.jpg"
+              src="/images/cleaning-banner.jpg"
               alt="Cleaning Banner"
               className="w-full h-80 lg:h-[500px] object-cover 
               transition-transform duration-[1200ms] group-hover:scale-110"
