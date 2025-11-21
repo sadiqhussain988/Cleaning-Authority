@@ -7,6 +7,7 @@ import About from "./pages/About";
 import WhyHireUs from "./pages/WhyHireUs";
 import DetailCleanRotationSystem from "./pages/DetailCleanRotationSystem";
 import Header from "./components/common/Header";
+import HouseCleaning from "./pages/cleaningservices/HouseCleaning";
 
 
 const MainLayout = () => {
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
       { path: "/about", element: <About/> },
       { path: "/why-hire-us", element: <WhyHireUs/>},
       { path: "/detail-clean-rotation-system", element: <DetailCleanRotationSystem/>},
+      { path: "/housecleaning", element: <HouseCleaning/>},
       
     ],
   },
