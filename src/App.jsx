@@ -1,5 +1,6 @@
 import React from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import Header from "./components/common/Header";
 import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
 import Home from "./pages/Home";
@@ -11,7 +12,7 @@ import Print from "./components/specialoffer/Print";
 
 const MainLayout = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Header/>
       <Navbar/>
       <Outlet /> 
