@@ -1,8 +1,10 @@
 import React from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import Header from "./components/common/Header";
 import Navbar from "./components/common/Navbar";
 import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
+import Header from "./components/common/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Faq from "./pages/Faq";
@@ -13,7 +15,7 @@ import OneTimeCleans from "./pages/cleaningservices/OneTimeCleans";
 
 const MainLayout = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Header/>
       <Navbar/>
       <Outlet /> 

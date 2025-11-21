@@ -45,7 +45,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="bg-[#0079C1] py-5 text-white">
+    <footer className="bg-[#0079C1] overflow-x-hidden py-5 text-white">
       <div 
         className={`lg:hidden bg-[#0079C1] transition-all duration-300 ${isScrolled ? 'fixed top-0 w-full z-50 shadow-lg' : 'hidden'}`}
       >
