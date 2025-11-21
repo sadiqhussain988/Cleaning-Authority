@@ -2,6 +2,7 @@ import React from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
+import Header from "./components/common/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Faq from "./pages/Faq";
