@@ -77,7 +77,7 @@ const Navbar = () => {
       dropdown: [
         {
           title: "House Cleaning",
-          link: "/irvine/our-cleaning-services/house-cleaning/",
+          link: "/housecleaning",
         },
         {
           title: "Office Cleaning",

@@ -4,9 +4,9 @@ import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import WhyHireUs from "./pages/WhyHireUs";
-import DetailCleanRotationSystem from "./pages/DetailCleanRotationSystem";
-import Header from "./components/common/Header";
+import Faq from "./pages/Faq";
+import Special from "./pages/SpecialOffer";
+import Print from "./components/specialoffer/Print";
 
 
 const MainLayout = () => {
@@ -26,8 +26,9 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home/> },
       { path: "/about", element: <About/> },
-      { path: "/why-hire-us", element: <WhyHireUs/>},
-      { path: "/detail-clean-rotation-system", element: <DetailCleanRotationSystem/>},
+      { path: "/faq", element: <Faq/> },
+      { path: "/special-offers", element: <Special/> },
+      { path: "/print", element: <Print/> },
       
     ],
   },
