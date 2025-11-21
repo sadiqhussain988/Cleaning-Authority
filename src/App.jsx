@@ -12,6 +12,7 @@ import Print from "./components/specialoffer/Print";
 const MainLayout = () => {
   return (
     <div>
+      <Header/>
       <Navbar/>
       <Outlet /> 
       <Footer/>
