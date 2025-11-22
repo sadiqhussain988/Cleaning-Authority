@@ -15,6 +15,11 @@ import OneTimeClean from "./pages/cleaningservices/OneTimeClean";
 import OfficeCleaning from "./pages/cleaningservices/OfficeCleaning";
 import DetailCleanRotationSystem from "./pages/DetailCleanRotationSystem";
 import WhyHireUs from "./pages/WhyHireUs";
+import BlogPage from "./pages/BlogPage";
+import BondedAndInseure from "./pages/BondedAndInsured";
+import GreenCleaning  from "./pages/GreenCleaning";
+import SatisfactionGuaranted  from "./pages/SatisfactionGuaranted";
+import CleaningFrequencies from "./pages/CleaningFrequencies";
 
 
 const MainLayout = () => {
@@ -44,6 +49,11 @@ const router = createBrowserRouter([
       { path: "/officeclean", element: <OfficeCleaning/> },
       { path: "/detailrotaion", element: <DetailCleanRotationSystem/> },
       { path: "/whyhireus", element: <WhyHireUs/> },
+      { path: "/blogpage", element: <BlogPage/> },
+      { path: "/bondedinsured", element: <BondedAndInseure/> },
+      { path: "/greencleaning", element: <GreenCleaning/> },
+      { path: "/satisfaction", element: <SatisfactionGuaranted/> },
+      { path: "/cleaningfrequencies", element: <CleaningFrequencies/> },
       
     ],
   },

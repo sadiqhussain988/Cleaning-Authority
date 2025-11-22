@@ -87,7 +87,7 @@ const FamilySection = () => {
 
   return (
     <section
-      className="bg-white py-16 md:py-20 border-t border-gray-100 overflow-x-hidden"
+      className="bg-white py-16 md:py-20 border-t border-gray-100 overflow-y-hidden"
       data-aos="fade-up"
     >
       <div className="mx-auto max-w-6xl px-4 text-center">

@@ -3,7 +3,7 @@ import React from 'react';
 const FreeEstimate = () => {
   return (
     <section
-      className="flex flex-col items-center justify-center mx-auto max-w-5xl min-h-[200px] md:min-h-[500px] lg:min-h-[150px] mb-20 bg-[#0079C1] text-white mt-20 rounded-md px-4 md:px-6"
+      className="flex flex-col items-center justify-center mx-auto max-w-5xl min-h-[200px] md:min-h-[500px] lg:min-h-[150px] mb-10 md:mb-20 bg-[#0079C1] text-white mt-20 rounded-md px-4 md:px-6"
       data-aos="fade-up"
     >
       {/* Heading */}
