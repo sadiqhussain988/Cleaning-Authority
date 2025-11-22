@@ -157,7 +157,7 @@ function ExpertHouseCleaning() {
                   schedule your next house cleaning service in Santa Ana.
                 </p>
                 <div className="mt-6 flex flex-col sm:flex-row gap-4">
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                  <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                     <FaPhone className="text-sm" />
                     Schedule Your Cleaning
                   </button>

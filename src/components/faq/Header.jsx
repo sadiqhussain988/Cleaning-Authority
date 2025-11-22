@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroFaq = () => {
   return (
-    <section className="relative w-full pt-40  ">
+    <section className="relative w-full pt-10  ">
       <div className="w-full flex flex-col md:flex-row items-stretch relative">
         
         {/* LEFT GREEN PART - Hidden below 800px, visible on larger screens */}

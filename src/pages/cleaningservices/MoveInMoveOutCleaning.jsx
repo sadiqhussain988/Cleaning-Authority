@@ -1,9 +1,9 @@
 import React from 'react'
-import Header from '../../components/ourcleaningservices/housecleaning/Header'
+import Header from '../../components/ourcleaningservices/MoveinMoveOutCleaning/Header'
 import ExpertHouseCleaning from '../../components/ourcleaningservices/housecleaning/ExpertHouseCleaning'
 import Testimonial from '../../components/ourcleaningservices/housecleaning/Testimonial'
 
-function HouseCleaning() {
+function MoveInMoveOutCleaning() {
   return (
     <div>
         <Header/>
@@ -13,4 +13,4 @@ function HouseCleaning() {
   )
 }
 
-export default HouseCleaning
+export default MoveInMoveOutCleaning

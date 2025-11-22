@@ -8,6 +8,13 @@ import About from "./pages/About";
 import Faq from "./pages/Faq";
 import Special from "./pages/SpecialOffer";
 import Print from "./components/specialoffer/Print";
+import HouseCleaning from "./pages/cleaningservices/HouseCleaning";
+import ApartmentCleaning from "./pages/cleaningservices/ApartmentCleaning";
+import MoveInMoveOutCleaning from "./pages/cleaningservices/MoveInMoveOutCleaning";
+import OneTimeClean from "./pages/cleaningservices/OneTimeClean";
+import OfficeCleaning from "./pages/cleaningservices/OfficeCleaning";
+import DetailCleanRotationSystem from "./pages/DetailCleanRotationSystem";
+import WhyHireUs from "./pages/WhyHireUs";
 
 
 const MainLayout = () => {
@@ -30,6 +37,13 @@ const router = createBrowserRouter([
       { path: "/faq", element: <Faq/> },
       { path: "/special-offers", element: <Special/> },
       { path: "/print", element: <Print/> },
+      { path: "/housecleaning", element: <HouseCleaning/> },
+      { path: "/apartmentcleaning", element: <ApartmentCleaning/> },
+      { path: "/moveinmoveout", element: <MoveInMoveOutCleaning/> },
+      { path: "/onetimeclean", element: <OneTimeClean/> },
+      { path: "/officeclean", element: <OfficeCleaning/> },
+      { path: "/detailrotaion", element: <DetailCleanRotationSystem/> },
+      { path: "/whyhireus", element: <WhyHireUs/> },
       
     ],
   },
