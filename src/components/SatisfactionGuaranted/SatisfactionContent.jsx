@@ -9,7 +9,7 @@ const SatisfactionContent = () => {
     { title: "Satisfaction Guaranteed", href: "/satisfaction-guaranteed/" },
     { title: "Cleaning Frequencies", href: "/cleaning-frequencies/" },
     { title: "Bonded & Insured", href: "/bonded-insured/" },
-    { title: "Fully Trained Employees", href: "fully-trained-employees/" },
+    { title: "Fully Trained Employees", href: "/fully-trained-employees" },
     { title: "MyTCA App", href: "/mytca-app/" },
     { title: "The Cleaning Authority CARES", href: "/the-cleaning-authority-cares" },
   ];
