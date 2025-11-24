@@ -8,7 +8,7 @@ import {
   FaShieldVirus, FaWindowRestore, FaFire, FaSnowflake
 } from 'react-icons/fa';
 
-export default function ExpertHouseCleaning() {
+export default function RefregenratorCleaning() {
   const services = [
     { name: 'House Cleaning', icon: FaHome, href: '/housecleaning' },
     { name: 'Apartment Cleaning', icon: FaBuilding, href: '/apartmentcleaning' },
@@ -24,13 +24,13 @@ export default function ExpertHouseCleaning() {
   ];
 
   const sections = [
-    { icon: <FaClock className="text-blue-400 text-xl" />, title: "How Often Should House Cleaning Be Done?", text: "Maintaining a pristine home environment is essential. We recommend regular cleaning to keep your space hygienic." },
-    { icon: <FaStar className="text-[#66A038] text-xl" />, title: "Benefits of Professional House Cleaning", text: "Save time & effort with higher-standard cleaning that reduces bacteria and allergens." },
-    { icon: <FaCheckCircle className="text-purple-400 text-xl" />, title: "What to Expect from Our House Cleaning Services", text: "Our trained team delivers detailed cleaning using premium products and expert techniques." },
-    { icon: <FaLeaf className="text-[#66A038] text-xl" />, title: "Eco-Friendly House Cleaning Products", text: "We use sustainable, eco-friendly, and safe cleaning products for your home." },
-    { icon: <FaDollarSign className="text-yellow-600 text-xl" />, title: "Understanding the Cost of House Cleaning Services", text: "We provide competitive and transparent pricing tailored to your needs." },
-    { icon: <FaListAlt className="text-indigo-400 text-xl" />, title: "Difference Between Standard and Deep Cleaning", text: "Standard cleaning maintains cleanliness while deep cleaning gives a complete detailed refresh." },
-    { icon: <FaLightbulb className="text-amber-500 text-xl" />, title: "Top House Cleaning Tips", text: "Declutter before cleaning & consider seasonal deep cleaning for best results." },
+    { icon: <FaClock className="text-blue-400 text-xl" />, title: "Professional Refrigerator Cleaners", text: "Maintaining a pristine home environment is essential. We recommend regular cleaning to keep your space hygienic." },
+    { icon: <FaStar className="text-[#66A038] text-xl" />, title: "Fridge Cleaning FAQ", text: "Save time & effort with higher-standard cleaning that reduces bacteria and allergens." },
+    { icon: <FaCheckCircle className="text-purple-400 text-xl" />, title: "Schedule Fridge Cleaning Services Today", text: "Our trained team delivers detailed cleaning using premium products and expert techniques." },
+    // { icon: <FaLeaf className="text-[#66A038] text-xl" />, title: "Find One-Time House Cleaning Services Near Me", text: "We use sustainable, eco-friendly, and safe cleaning products for your home." },
+    // { icon: <FaDollarSign className="text-yellow-600 text-xl" />, title: "One-Time Cleaning for Special Situations", text: "We provide competitive and transparent pricing tailored to your needs." },
+    // { icon: <FaListAlt className="text-indigo-400 text-xl" />, title: "Cleaning Services Designed for Irvine Homes", text: "Standard cleaning maintains cleanliness while deep cleaning gives a complete detailed refresh." },
+    // { icon: <FaLightbulb className="text-amber-500 text-xl" />, title: "Eco-Friendly Cleaning With EPA Approved Products", text: "Declutter before cleaning & consider seasonal deep cleaning for best results." },
   ];
 
   return (
@@ -135,7 +135,8 @@ export default function ExpertHouseCleaning() {
           >
 
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 bg-gradient-to-r from-blue-400 to-[#66A038] bg-clip-text text-transparent drop-shadow-lg">
-              Expert House Cleaning Services in Santa Ana, CA
+     Refridge Cleaning Service
+
             </h1>
 
             {/* Sections */}
