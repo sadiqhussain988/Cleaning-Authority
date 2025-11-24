@@ -18,7 +18,7 @@ import WhyJoin from "./pages/WhyJoin";
 import Faq from "./pages/Faq";
 import Special from "./pages/SpecialOffer";
 import Print from "./components/specialoffer/Print";
-import CompanyHistory from "./pages/CompanyHistory.JSX";
+import CompanyHistory from "./pages/CompanyHistory";
 import VisionMission from "./pages/VisionMission";
 import Reviews from "./pages/Reviews";
 import OwnFranchise from "./pages/OwnFranchise";
