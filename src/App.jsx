@@ -11,6 +11,7 @@ import Print from "./components/specialoffer/Print";
 import CompanyHistory from "./pages/CompanyHistory.JSX";
 import VisionMission from "./pages/VisionMission";
 import Reviews from "./pages/Reviews";
+import OwnFranchise from "./pages/OwnFranchise";
 
 
 const MainLayout = () => {
@@ -32,6 +33,7 @@ const router = createBrowserRouter([
       { path: "/about", element: <About/> },
       { path: "/companyhistory", element: <CompanyHistory/> },
       { path: "/visionmission", element: <VisionMission/> },
+      { path: "/ownfranchise", element: <OwnFranchise/> },
       { path: "/reviews", element: <Reviews/> },
       { path: "/faq", element: <Faq/> },
       { path: "/special-offers", element: <Special/> },
