@@ -8,7 +8,7 @@ import {
   FaShieldVirus, FaWindowRestore, FaFire, FaSnowflake
 } from 'react-icons/fa';
 
-export default function ExpertHouseCleaning() {
+export default function ApartmentCleaning1() {
   const services = [
     { name: 'House Cleaning', icon: FaHome, href: '/housecleaning' },
     { name: 'Apartment Cleaning', icon: FaBuilding, href: '/apartmentcleaning' },
@@ -24,12 +24,12 @@ export default function ExpertHouseCleaning() {
   ];
 
   const sections = [
-    { icon: <FaClock className="text-blue-400 text-xl" />, title: "How Often Should House Cleaning Be Done?", text: "Maintaining a pristine home environment is essential. We recommend regular cleaning to keep your space hygienic." },
-    { icon: <FaStar className="text-[#66A038] text-xl" />, title: "Benefits of Professional House Cleaning", text: "Save time & effort with higher-standard cleaning that reduces bacteria and allergens." },
-    { icon: <FaCheckCircle className="text-purple-400 text-xl" />, title: "What to Expect from Our House Cleaning Services", text: "Our trained team delivers detailed cleaning using premium products and expert techniques." },
-    { icon: <FaLeaf className="text-[#66A038] text-xl" />, title: "Eco-Friendly House Cleaning Products", text: "We use sustainable, eco-friendly, and safe cleaning products for your home." },
-    { icon: <FaDollarSign className="text-yellow-600 text-xl" />, title: "Understanding the Cost of House Cleaning Services", text: "We provide competitive and transparent pricing tailored to your needs." },
-    { icon: <FaListAlt className="text-indigo-400 text-xl" />, title: "Difference Between Standard and Deep Cleaning", text: "Standard cleaning maintains cleanliness while deep cleaning gives a complete detailed refresh." },
+    { icon: <FaClock className="text-blue-400 text-xl" />, title: "Ensure a Spotless Apartment Or Condo With Our Professional Cleaning Services", text: "We know few people have the spare time and energy to clean, and that's why we provide cleaning and sanitizing services meant specifically for apartments, condos, and living spaces of any size. From a one-bedroom apartment to a large condominium, we can clean your whole living space so you can sit back and enjoy the comfort and peace of mind that comes with living in a clean and sanitized space." },
+    { icon: <FaStar className="text-[#66A038] text-xl" />, title: "Comprehensive Cleaning & Sanitization Services", text: "Save time & effort with higher-standard cleaning that reduces bacteria and allergens." },
+    { icon: <FaCheckCircle className="text-purple-400 text-xl" />, title: "Why Choose Professional Apartment Cleaning?", text: "Our trained team delivers detailed cleaning using premium products and expert techniques." },
+    { icon: <FaLeaf className="text-[#66A038] text-xl" />, title: "Cleaning Services Tailored to Your Needs", text: "We use sustainable, eco-friendly, and safe cleaning products for your home." },
+    { icon: <FaDollarSign className="text-yellow-600 text-xl" />, title: "Find Reliable Apartment Cleaning Services Near You", text: "We provide competitive and transparent pricing tailored to your needs." },
+    { icon: <FaListAlt className="text-indigo-400 text-xl" />, title: "Irvine Apartment Cleaning & Sanitizing FAQ", text: "Standard cleaning maintains cleanliness while deep cleaning gives a complete detailed refresh." },
     { icon: <FaLightbulb className="text-amber-500 text-xl" />, title: "Top House Cleaning Tips", text: "Declutter before cleaning & consider seasonal deep cleaning for best results." },
   ];
 
@@ -135,7 +135,7 @@ export default function ExpertHouseCleaning() {
           >
 
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 bg-gradient-to-r from-blue-400 to-[#66A038] bg-clip-text text-transparent drop-shadow-lg">
-              Expert House Cleaning Services in Santa Ana, CA
+            Apartment Cleaning in Irvine, CA
             </h1>
 
             {/* Sections */}
