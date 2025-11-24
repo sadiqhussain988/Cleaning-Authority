@@ -5,6 +5,11 @@ import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Job from "./pages/Job";
+import HouseCleaner from "./pages/HouseCleaner";
+import TeamLeader from "./pages/TeamLeader";
+import Manager from "./pages/Manager";
+import WhyJoin from "./pages/WhyJoin";
 import Faq from "./pages/Faq";
 import Special from "./pages/SpecialOffer";
 import Print from "./components/specialoffer/Print";
@@ -45,6 +50,19 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home/> },
       { path: "/about", element: <About/> },
+      { path: "/jobs", element: <Job/> },
+      { path: "/jobs/housecleaners", element: <HouseCleaner/> },
+      { path: "/jobs/team-leaders-trainers", element: <TeamLeader/> },
+      { path: "/jobs/managers", element: <Manager/> },
+      { path: "/jobs/why-join", element: <WhyJoin/> },
+
+
+
+
+
+
+
+
       { path: "/faq", element: <Faq/> },
       { path: "/special-offers", element: <Special/> },
       { path: "/print", element: <Print/> },
