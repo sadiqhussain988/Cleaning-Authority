@@ -25,17 +25,17 @@ import {
 
 function ExpertHouseCleaning() {
   const services = [
-    { name: 'House Cleaning', icon: FaHome, href: '/irvine/our-cleaning-services/house-cleaning/' },
-    { name: 'Apartment Cleaning', icon: FaBuilding, href: '/irvine/our-cleaning-services/apartment-cleaning/' },
-    { name: 'Move In / Move Out Cleaning', icon: FaTruck, href: '/irvine/our-cleaning-services/move-in-move-out-cleaning/' },
-    { name: 'One-Time Cleans', icon: FaCalendarDay, href: '/our-cleaning-services/one-time-cleans/' },
-    { name: 'Office Cleaning', icon: FaBriefcase, href: '/our-cleaning-services/office-cleaning/' },
-    { name: 'Housekeeping', icon: FaBroom, href: '/irvine/our-cleaning-services/housekeeping/' },
-    { name: 'After Remodeling Cleaning', icon: FaPaintRoller, href: '/our-cleaning-services/after-remodeling-cleaning/' },
-    { name: 'Home Disinfection', icon: FaShieldVirus, href: '/our-cleaning-services/home-disinfection/' },
-    { name: 'Window Washing', icon: FaWindowRestore, href: '/our-cleaning-services/window-washing/' },
-    { name: 'Oven Cleaning', icon: FaFire, href: '/our-cleaning-services/oven-cleaning/' },
-    { name: 'Refrigerator Cleaning', icon: FaSnowflake, href: '/our-cleaning-services/refrigerator-cleaning/' },
+    { name: 'House Cleaning', icon: FaHome, href: '/housecleaning' },
+    { name: 'Apartment Cleaning', icon: FaBuilding, href: '/apartmentcleaning' },
+    { name: 'Move In / Move Out Cleaning', icon: FaTruck, href: '/moveinmoveout' },
+    { name: 'One-Time Cleans', icon: FaCalendarDay, href: '/onetimeclean' },
+    { name: 'Office Cleaning', icon: FaBriefcase, href: '/officeclean' },
+    { name: 'Housekeeping', icon: FaBroom, href: '/housekeeping' },
+    { name: 'After Remodeling Cleaning', icon: FaPaintRoller, href: '/after-remodeling-cleaning' },
+    { name: 'Home Disinfection', icon: FaShieldVirus, href: '/home-disinfection-cleaning' },
+    { name: 'Window Washing', icon: FaWindowRestore, href: '/window-washing-cleaning' },
+    { name: 'Oven Cleaning', icon: FaFire, href: '/oven-cleaning' },
+    { name: 'Refrigerator Cleaning', icon: FaSnowflake, href: '/refrigenrator-cleaning' },
   ];
 
   return (
@@ -157,7 +157,7 @@ function ExpertHouseCleaning() {
                   schedule your next house cleaning service in Santa Ana.
                 </p>
                 <div className="mt-6 flex flex-col sm:flex-row gap-4">
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                  <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                     <FaPhone className="text-sm" />
                     Schedule Your Cleaning
                   </button>
