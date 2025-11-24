@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const WhyHireSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -59,15 +60,15 @@ const WhyHireSection = () => {
                   <p className="text-white/90 text-lg">
                     Our Detail-Clean Rotation System® has been proven effective in 20 million cleans.
                   </p>
-                  <a 
-                    href="/why-hire-us-/detail-clean-rotation-system-/"
+                  <Link
+                    to="/detail-clean-rotation-system"
                     className="inline-flex items-center px-8 py-4 bg-[#66a038] hover:bg-[#558c2d] text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group"
                   >
                     Learn About Our Cleaning System
                     <svg className="w-5 h-5 ml-3 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -82,7 +83,7 @@ const WhyHireSection = () => {
                   <h3 className="text-2xl font-bold text-gray-900">ECOLOGO® Certified</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
-                  The <a href="https://www.ul.com/resources/ecologo-certification-program" target="_blank" rel="noopener noreferrer" className="text-[#66a038] hover:text-[#558c2d] font-semibold underline transition-colors duration-200">ECOLOGO</a> program offers credible third-party certification of products and services to build and strengthen trust between buyers and suppliers, as well as customers and manufacturers. ECOLOGO Certified products are certified for reduced environmental impact from UL Environment.
+                  The <Link to="https://www.ul.com/resources/ecologo-certification-program" target="_blank" rel="noopener noreferrer" className="text-[#66a038] hover:text-[#558c2d] font-semibold underline transition-colors duration-200">ECOLOGO</Link> program offers credible third-party certification of products and services to build and strengthen trust between buyers and suppliers, as well as customers and manufacturers. ECOLOGO Certified products are certified for reduced environmental impact from UL Environment.
                 </p>
               </div>
 
@@ -102,25 +103,17 @@ const WhyHireSection = () => {
                   <p className="text-gray-700 text-lg">
                     Invest in your free time with our services. Get started with a personalized estimate!
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <a 
-                      href="tel:949.990.5795"
-                      className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#66a038] font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 border-2 border-[#66a038] shadow-lg group"
-                    >
-                      <svg className="w-5 h-5 mr-3 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                      949.990.5795
-                    </a>
-                    <a 
-                      href="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1&utm_campaign=&utm_source=&utm_medium=&utm_content=&fbclid=&t=888.658.0659&sa=-1736996442"
+                  <div>
+                   
+                    <Link 
+                      to="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1&utm_campaign=&utm_source=&utm_medium=&utm_content=&fbclid=&t=888.658.0659&sa=-1736996442"
                       className="inline-flex items-center justify-center px-8 py-4 bg-[#66a038] hover:bg-[#558c2d] text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg group"
                     >
                       Immediate Online Estimate
                       <svg className="w-5 h-5 ml-3 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -163,7 +156,7 @@ const WhyHireSection = () => {
                         }`}
                       >
                         <a 
-                          href={`/why-hire-us-/${item.toLowerCase().replace(/&/g, '').replace(/\s+/g, '-')}/`}
+                          href={`/${item.toLowerCase().replace(/&/g, '').replace(/\s+/g, '-')}/`}
                           className="flex items-center justify-between px-6 py-4 text-gray-700 hover:text-[#66a038] transition-all duration-300 group-hover:pl-8"
                         >
                           <span className="font-medium">{item}</span>
@@ -188,7 +181,7 @@ const WhyHireSection = () => {
                   <h3 className="text-xl font-bold text-gray-900">EPA Safer Choice</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
-                  When you see a product with the EPA Safer Choice label, it means that every ingredient has been reviewed by EPA scientists. Only products meeting the <a href="https://www.epa.gov/saferchoice/standard" target="_blank" rel="noopener noreferrer" className="text-[#66a038] hover:text-[#558c2d] font-semibold underline transition-colors duration-200">Safer Choice Standard</a> can carry this label.
+                  When you see a product with the EPA Safer Choice label, it means that every ingredient has been reviewed by EPA scientists. Only products meeting the <Link to="https://www.epa.gov/saferchoice/standard" target="_blank" rel="noopener noreferrer" className="text-[#66a038] hover:text-[#558c2d] font-semibold underline transition-colors duration-200">Safer Choice Standard</Link> can carry this label.
                 </p>
               </div>
 
@@ -202,8 +195,8 @@ const WhyHireSection = () => {
                   </div>
                   <div className="flex-1">
                     <p className="text-xl font-bold mb-3">Save Time. Save Money.</p>
-                    <a 
-                      href="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1&utm_campaign=&utm_source=&utm_medium=cpc&utm_content=&fbclid=&t=888.658.0659&sa=-1736996442"
+                    <Link
+                      to="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1&utm_campaign=&utm_source=&utm_medium=cpc&utm_content=&fbclid=&t=888.658.0659&sa=-1736996442"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center w-full px-6 py-4 bg-white text-[#66a038] font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg group"
@@ -212,7 +205,7 @@ const WhyHireSection = () => {
                       <svg className="w-5 h-5 ml-3 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -223,14 +216,14 @@ const WhyHireSection = () => {
                   Ready for a clean, healthy home? Call The Cleaning Authority today at{' '}
                   <a href="tel:9499905795" className="text-[#0079c1] hover:text-[#005a8c] font-bold transition-colors duration-200">(949) 990-5795</a>
                   {' '}for your{' '}
-                  <a 
-                    href="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1&utm_campaign=&utm_source=&utm_medium=&utm_content=&fbclid=&t=888.658.0659&sa=-1736996442" 
+                  <Link 
+                    to="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1&utm_campaign=&utm_source=&utm_medium=&utm_content=&fbclid=&t=888.658.0659&sa=-1736996442" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-[#66a038] hover:text-[#558c2d] font-bold underline transition-colors duration-200"
                   >
                     free estimate
-                  </a>
+                  </Link>
                   !
                 </p>
               </div>

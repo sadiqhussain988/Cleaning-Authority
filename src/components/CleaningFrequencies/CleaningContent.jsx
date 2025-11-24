@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CleaningContent = () => {
   const frequencies = [
@@ -90,9 +91,9 @@ const CleaningContent = () => {
                 
                 <p className="text-gray-700 leading-relaxed">
                   With this system, your house enjoys a total detail-clean within the first two visits. Then, we maintain this pristine clean with each visit. On the first clean, we'll clean your home and provide special attention to your kitchen and bathrooms. On the second clean, we'll thoroughly clean your entire house, with{" "}
-                  <a href="https://www.thecleaningauthority.com/why-hire-us-/detail-clean-rotation-system/" className="text-[#0079C1] hover:text-[#005a8c] font-semibold transition-colors duration-200">
+                  <Link  to="/detail-clean-rotation-system" className="text-[#0079C1] hover:text-[#005a8c] font-semibold transition-colors duration-200">
                     detail-clean services
-                  </a> for your living and sleeping areas. We maintain this thorough level of clean with detail cleaning on a rotating basis.
+                  </Link> for your living and sleeping areas. We maintain this thorough level of clean with detail cleaning on a rotating basis.
                 </p>
               </div>
 
@@ -103,9 +104,9 @@ const CleaningContent = () => {
                 
                 <p className="text-gray-700 leading-relaxed mb-6">
                   Our company was founded in 1977. We are trusted by our clients nationwide, and we have a reputation for{" "}
-                  <a href="/why-hire-us-/satisfaction-guaranteed/" className="text-[#0079C1] hover:text-[#005a8c] font-semibold transition-colors duration-200">
+                  <Link to="/satisfaction-guaranteed/" className="text-[#0079C1] hover:text-[#005a8c] font-semibold transition-colors duration-200">
                     customer satisfaction
-                  </a> and for excellent service. <strong className="font-semibold text-gray-900">There's nothing better than a clean house, but who has time for cleaning?</strong> Our team of experts takes care of all the details, so you can enjoy a clean house while focusing on the things that matter most.
+                  </Link> and for excellent service. <strong className="font-semibold text-gray-900">There's nothing better than a clean house, but who has time for cleaning?</strong> Our team of experts takes care of all the details, so you can enjoy a clean house while focusing on the things that matter most.
                 </p>
                 
                 <div className="bg-green-50 rounded-xl p-6 border-l-4 border-[#66a038]">
@@ -128,19 +129,18 @@ const CleaningContent = () => {
             {/* Why Hire Us Navigation */}
             <aside className="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden mb-8">
               <header className="bg-gradient-to-r from-[#66a038] to-[#5a943f] p-6">
-                <a href="/why-hire-us-/" className="block hover:opacity-95 transition-opacity duration-200">
+               
                   <h2 className="text-2xl font-bold text-white text-center">
                     Why Hire Us?
                   </h2>
-                </a>
               </header>
               
               <nav className="p-4">
                 <ul className="space-y-2">
                   {sideNavItems.map((item, index) => (
                     <li key={index}>
-                      <a 
-                        href={`/why-hire-us-/${item.toLowerCase().replace(/\s+/g, '-').replace(/[&]/g, '')}/`}
+                      <Link
+                        to={`/${item.toLowerCase().replace(/\s+/g, '-').replace(/[&]/g, '')}/`}
                         className={`flex items-center justify-between p-4 rounded-lg transition-all duration-200 ${
                           item === "Cleaning Frequencies" 
                             ? "bg-gradient-to-r from-[#66a038] to-[#5a943f] text-white shadow-sm" 
@@ -151,7 +151,7 @@ const CleaningContent = () => {
                         <svg className={`w-4 h-4 ${item === "Cleaning Frequencies" ? "text-white" : "text-gray-400"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

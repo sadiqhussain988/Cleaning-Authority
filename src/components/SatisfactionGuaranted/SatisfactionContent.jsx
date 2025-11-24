@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const SatisfactionContent = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sideLinks = [
-    { title: "Detail-Clean Rotation System", href: "/why-hire-us-/detail-clean-rotation-system/" },
-    { title: "Green Cleaning", href: "/why-hire-us-/green-cleaning/" },
-    { title: "Satisfaction Guaranteed", href: "/why-hire-us-/satisfaction-guaranteed/" },
-    { title: "Cleaning Frequencies", href: "/why-hire-us-/cleaning-frequencies/" },
-    { title: "Bonded & Insured", href: "/why-hire-us-/bonded-insured/" },
-    { title: "Fully Trained Employees", href: "/why-hire-us-/professionally-trained-employees/" },
-    { title: "MyTCA App", href: "/why-hire-us-/mytca-app/" },
-    { title: "The Cleaning Authority CARES", href: "/cares/" },
+    { title: "Detail-Clean Rotation System", href: "/detail-clean-rotation-system/" },
+    { title: "Green Cleaning", href: "/green-cleaning/" },
+    { title: "Satisfaction Guaranteed", href: "/satisfaction-guaranteed/" },
+    { title: "Cleaning Frequencies", href: "/cleaning-frequencies/" },
+    { title: "Bonded & Insured", href: "/bonded-insured/" },
+    { title: "Fully Trained Employees", href: "/fully-trained-employees" },
+    { title: "MyTCA App", href: "/mytca-app/" },
+    { title: "The Cleaning Authority CARES", href: "/the-cleaning-authority-cares" },
   ];
 
   useEffect(() => {
@@ -135,9 +136,9 @@ const SatisfactionContent = () => {
                         </p>
                         <p className="text-green-700 text-base sm:text-lg">
                           Our team proudly uses residential cleaning solutions that are environmentally responsible.{" "}
-                          <a href="/why-hire-us-/green-cleaning/" className="text-[#66a038] hover:text-green-800 font-semibold underline transition-colors duration-200">
+                          <Link to="/green-cleaning/" className="text-[#66a038] hover:text-green-800 font-semibold underline transition-colors duration-200">
                             About Our Eco-Friendly Methods
-                          </a>
+                          </Link>
                         </p>
                       </div>
                     </div>
@@ -171,14 +172,12 @@ const SatisfactionContent = () => {
               {/* Navigation Sidebar */}
               <div className={`bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl overflow-hidden transform transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                 <div className="bg-gradient-to-r from-[#66a038] to-[#558c2d] px-4 sm:px-6 py-3 sm:py-5">
-                  <a href="/why-hire-us-/" className="block group">
                     <h2 className="text-lg sm:text-xl font-bold text-white flex items-center">
                       <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 transform group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
                       Why Hire Us?
                     </h2>
-                  </a>
                 </div>
                 <nav>
                   <ul className="divide-y divide-gray-100">
@@ -189,15 +188,15 @@ const SatisfactionContent = () => {
                           link.title === "Satisfaction Guaranteed" ? 'bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-[#66a038]' : ''
                         }`}
                       >
-                        <a 
-                          href={link.href}
+                        <Link
+                          to={link.href}
                           className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 text-gray-700 hover:text-[#66a038] transition-all duration-300 group-hover:pl-5 sm:group-hover:pl-8 text-sm sm:text-base"
                         >
                           <span className="font-medium">{link.title}</span>
                           <svg className="w-3 h-3 sm:w-4 sm:h-4 text-gray-400 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
