@@ -3,7 +3,7 @@ import React from "react";
 const SatisfactionBanner = () => {
 return ( <section className="relative w-full h-[28rem] md:h-[30rem] lg:h-[32rem] rounded-3xl overflow-hidden shadow-xl transition-shadow duration-500 hover:shadow-2xl group">
 
-```
+
   {/* Background Image with Overlay */}
   <div className="absolute inset-0 w-full h-full overflow-hidden">
     <img

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const InsuredContent = () => {
   return (
@@ -76,9 +77,9 @@ const InsuredContent = () => {
                     {
                       content: <>
                         <strong>Our businesses are </strong>
-                        <a href="/why-hire-us-/locally-owned/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
+                        <Link  to="/locally-owned/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
                           <strong>locally owned and operated</strong>
-                        </a>
+                        </Link>
                         <strong>.</strong>
                         Each franchise is run by people in your community. We only succeed as a local business by taking care of our customers and providing exceptional service.
                       </>
@@ -86,9 +87,9 @@ const InsuredContent = () => {
                     {
                       content: <>
                         <strong>We have excellent </strong>
-                        <a href="/reviews/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
+                        <Link to="/reviews/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
                           <strong>customer reviews</strong>
-                        </a>
+                        </Link>
                         <strong>.</strong>
                         Our clients trust us, and there's a reason for this. We're committed to excellence, professionalism, and customer satisfaction. We go above and beyond!
                       </>
@@ -96,9 +97,9 @@ const InsuredContent = () => {
                     {
                       content: <>
                         <strong>All our employees are </strong>
-                        <a href="/why-hire-us-/professionally-trained-employees/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
+                        <Link  to="/fully-trained-employees/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
                           <strong>screened and trained</strong>
-                        </a>
+                        </Link>
                         <strong>.</strong>
                         Every single employee of The Cleaning Authority is thoroughly screened and highly trained for our customers' peace of mind.
                       </>
@@ -107,9 +108,9 @@ const InsuredContent = () => {
                       content: <>
                         <strong>We use a proven cleaning system, specialized to suit our clients' needs.</strong>
                         You can have confidence in getting a job well done because we use a highly specialized system. Our{" "}
-                        <a href="/why-hire-us-/detail-clean-rotation-system/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
+                        <Link to="/detail-clean-rotation-system/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
                           Detail-Clean Rotation System
-                        </a>
+                        </Link>
                         ® is thorough and proven.
                       </>
                     }
@@ -137,13 +138,13 @@ const InsuredContent = () => {
                   Our Detail-Clean Rotation System® has been proven to be effective in over 20 million cleans.
                 </p>
               </div>
-              <a className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg animate-bounce-subtle"
-                 href="/why-hire-us-/detail-clean-rotation-system-/">
+              <Link className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg animate-bounce-subtle"
+                 to="/detail-clean-rotation-system-/">
                 Learn More
                 <svg className="w-5 h-5 hover:scale-125 hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -157,17 +158,17 @@ const InsuredContent = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-4 border-b border-gray-200 hover:text-gray-700 transition-colors duration-300">Why Hire Us?</h2>
             <ul className="space-y-0">
               {[
-                { href: "/why-hire-us-/detail-clean-rotation-system/", text: "Detail-Clean Rotation System" },
-                { href: "/why-hire-us-/green-cleaning/", text: "Green Cleaning" },
-                { href: "/why-hire-us-/satisfaction-guaranteed/", text: "Satisfaction Guaranteed" },
-                { href: "/why-hire-us-/cleaning-frequencies/", text: "Cleaning Frequencies" },
-                { href: "/why-hire-us-/bonded-insured/", text: "Bonded & Insured", current: true },
-                { href: "/why-hire-us-/professionally-trained-employees/", text: "Fully Trained Employees" },
-                { href: "/why-hire-us-/mytca-app/", text: "MyTCA App" },
-                { href: "/cares/", text: "The Cleaning Authority CARES" }
+                { href: "/detail-clean-rotation-system/", text: "Detail-Clean Rotation System" },
+                { href: "/green-cleaning/", text: "Green Cleaning" },
+                { href: "/satisfaction-guaranteed/", text: "Satisfaction Guaranteed" },
+                { href: "/cleaning-frequencies/", text: "Cleaning Frequencies" },
+                { href: "/bonded-insured/", text: "Bonded & Insured", current: true },
+                { href: "/fully-trained-employees/", text: "Fully Trained Employees" },
+                { href: "/mytca-app/", text: "MyTCA App" },
+                { href: "/the-cleaning-authority-cares/", text: "The Cleaning Authority CARES" }
               ].map((item, index) => (
                 <li key={index}>
-                  <a href={item.href} className={`flex items-center gap-3 p-3 rounded-lg transition-all duration-300 group ${
+                  <Link to={item.href} className={`flex items-center gap-3 p-3 rounded-lg transition-all duration-300 group ${
                     item.current 
                       ? 'text-blue-600 bg-blue-50 border-l-4 border-blue-600 font-semibold' 
                       : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50 hover:transform hover:translate-x-2 hover:scale-[1.02]'
@@ -183,7 +184,7 @@ const InsuredContent = () => {
                     <svg className="w-4 h-4 ml-auto transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -221,12 +222,12 @@ const InsuredContent = () => {
                       <strong className="text-xl text-gray-900 block mb-4 hover:scale-105 transition-transform duration-300">Want a clean home?</strong>
                       <p className="text-lg text-gray-700 hover:text-gray-800 transition-colors duration-300">
                         Call us at <a href="tel:(949) 990-5795" className="text-blue-600 hover:text-blue-800 font-semibold text-xl transition-colors duration-200">(949) 990-5795</a> or{" "}
-                        <a href="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1&utm_campaign=&utm_source=&utm_medium=&utm_content=&fbclid=&t=888.658.0659&sa=-1736996442" 
+                        <Link to="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1&utm_campaign=&utm_source=&utm_medium=&utm_content=&fbclid=&t=888.658.0659&sa=-1736996442" 
                            target="_blank" 
                            rel="noopener noreferrer"
                            className="text-blue-600 hover:text-blue-800 font-semibold underline transition-colors duration-200">
                           get an immediate online estimate
-                        </a> by filling out our form today.
+                        </Link> by filling out our form today.
                       </p>
                     </div>
                   </div>
@@ -242,7 +243,7 @@ const InsuredContent = () => {
             </div>
             <strong className="block text-2xl font-bold mb-2 hover:scale-105 transition-transform duration-300">Save Time. Save Money.</strong>
             <p className="text-blue-100 mb-6 hover:text-white transition-colors duration-300">Get your free estimate today and discover the difference</p>
-            <a href="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1&s=&utm_campaign=&utm_source=&utm_medium=&utm_content=&fbclid=&t=888.658.0659&sa=-1736996442"
+            <Link to="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1&s=&utm_campaign=&utm_source=&utm_medium=&utm_content=&fbclid=&t=888.658.0659&sa=-1736996442"
                target="_blank"
                rel="noopener noreferrer"
                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-2xl transition-all duration-300 shadow-lg animate-bounce-subtle">
@@ -250,7 +251,7 @@ const InsuredContent = () => {
               <svg className="w-5 h-5 hover:scale-125 hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </a>
+            </Link>
           </div>
         </aside>
       </div>
