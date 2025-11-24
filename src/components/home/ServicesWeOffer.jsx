@@ -150,15 +150,6 @@ const ServicesSection = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <section className="w-full py-16 overflow-hidden">
-      <h2
-        className="text-center text-4xl font-semibold mb-14 "
-        data-aos="fade-up"
-      >
-        Services We Offer
-      </h2>
-=======
     <section id="LocalServices" className="services py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <header className="text-center mb-12">
@@ -170,7 +161,6 @@ const ServicesSection = () => {
             life easier and more comfortable.
           </p>
         </header>
->>>>>>> 389be19b6e8497dfe473032007b368f9a112409b
 
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
           {services.map((service, index) => (
@@ -196,7 +186,7 @@ const ServicesSection = () => {
                   {service.description}
                 </p>
 
-                <span className="inline-block px-6 py-3 bg-blue-600 text-white rounded-md shadow-md transform group-hover:translate-y-1 transition-all duration-300">
+                <span className="inline-block px-6 py-3 bg-[#66A038] hover:bg-blue-500 text-white rounded-md shadow-md transform group-hover:translate-y-1 transition-all duration-300">
                   Learn More
                 </span>
               </a>
