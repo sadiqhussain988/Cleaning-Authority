@@ -46,7 +46,7 @@ export default function JobCultureSection() {
 
           {/* Text RIGHT */}
           <div data-aos="fade-left">
-            <h3 className="text-lg sm:text-xl font-extrabold text-[#111319]">
+            <h3 className="text-[33px] sm:text-3xl font-extrabold text-[#111319]">
               Life at TCA
             </h3>
             <p className="mt-3 text-sm sm:text-base text-[#404755] max-w-lg">

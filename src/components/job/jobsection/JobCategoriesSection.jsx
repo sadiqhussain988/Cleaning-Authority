@@ -5,19 +5,19 @@ const jobs = [
     title: "Housecleaners",
     image:
       "https://www.thecleaningauthority.com/images/cta/housecleaners.2403071314113.jpg",
-    link: "#housecleaners",
+    link: "/jobs/housecleaners",
   },
   {
     title: "Team Leaders & Trainers",
     image:
       "https://www.thecleaningauthority.com/images/cta/teamleaders.2403071314270.jpg",
-    link: "#leaders-trainers",
+    link: "/jobs/team-leaders-trainers",
   },
   {
     title: "Managers",
     image:
       "https://www.thecleaningauthority.com/images/cta/managers.2403071314370.jpg",
-    link: "#managers",
+    link: "/jobs/managers",
   },
 ];
 
