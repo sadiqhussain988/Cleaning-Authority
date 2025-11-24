@@ -13,24 +13,10 @@ import WhyJoin from "./pages/WhyJoin";
 import Faq from "./pages/Faq";
 import Special from "./pages/SpecialOffer";
 import Print from "./components/specialoffer/Print";
-import HouseCleaning from "./pages/cleaningservices/HouseCleaning";
-import ApartmentCleaning from "./pages/cleaningservices/ApartmentCleaning";
-import MoveInMoveOutCleaning from "./pages/cleaningservices/MoveInMoveOutCleaning";
-import OneTimeClean from "./pages/cleaningservices/OneTimeClean";
-import OfficeCleaning from "./pages/cleaningservices/OfficeCleaning";
-import DetailCleanRotationSystem from "./pages/DetailCleanRotationSystem";
-import WhyHireUs from "./pages/WhyHireUs";
-import BlogPage from "./pages/BlogPage";
-import BondedAndInseure from "./pages/BondedAndInsured";
-import GreenCleaning  from "./pages/GreenCleaning";
-import SatisfactionGuaranted  from "./pages/SatisfactionGuaranted";
-import CleaningFrequencies from "./pages/CleaningFrequencies";
-import HouseKeeping from "./pages/cleaningservices/HouseKeeping";
-import AfterRemodelingCleaning from "./pages/cleaningservices/AfterRemodelingCleaning";
-import HomeDisinfection from "./pages/cleaningservices/HomeDisinfection";
-import WindowWashing from "./pages/cleaningservices/WindowWashing";
-import OvenCleaning from "./pages/cleaningservices/OvenCleaning";
-import RefrigeratorCleaning from "./pages/cleaningservices/RefrigeratorCleaning";
+import CompanyHistory from "./pages/CompanyHistory.JSX";
+import VisionMission from "./pages/VisionMission";
+import Reviews from "./pages/Reviews";
+import OwnFranchise from "./pages/OwnFranchise";
 
 
 const MainLayout = () => {
@@ -50,19 +36,10 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home/> },
       { path: "/about", element: <About/> },
-      { path: "/jobs", element: <Job/> },
-      { path: "/jobs/housecleaners", element: <HouseCleaner/> },
-      { path: "/jobs/team-leaders-trainers", element: <TeamLeader/> },
-      { path: "/jobs/managers", element: <Manager/> },
-      { path: "/jobs/why-join", element: <WhyJoin/> },
-
-
-
-
-
-
-
-
+      { path: "/companyhistory", element: <CompanyHistory/> },
+      { path: "/visionmission", element: <VisionMission/> },
+      { path: "/ownfranchise", element: <OwnFranchise/> },
+      { path: "/reviews", element: <Reviews/> },
       { path: "/faq", element: <Faq/> },
       { path: "/special-offers", element: <Special/> },
       { path: "/print", element: <Print/> },

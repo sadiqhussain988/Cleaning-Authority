@@ -1,12 +1,13 @@
 import React from 'react'
 import Header from "../../components/ourcleaningservices/housekeeping/Header"
-import ExpertHouseCleaning from '../../components/ourcleaningservices/housecleaning/ExpertHouseCleaning'
+
 import Testimonial from '../../components/ourcleaningservices/housecleaning/Testimonial'
+import Housekeeping1 from '../../components/ourcleaningservices/housekeeping/HouseKeeping1'
 function HouseKeeping() {
   return (
     <div>
     <Header/>
-    <ExpertHouseCleaning/>
+    <Housekeeping1/>
     <Testimonial/>
 </div>
   )
