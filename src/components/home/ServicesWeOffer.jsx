@@ -33,7 +33,7 @@ export default function ServicesWeOffer() {
   return (
     <section className="w-full py-16 overflow-hidden">
       <h2
-        className="text-center text-4xl font-semibold mb-14"
+        className="text-center text-4xl font-semibold mb-14 "
         data-aos="fade-up"
       >
         Services We Offer
