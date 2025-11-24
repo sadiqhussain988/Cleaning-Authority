@@ -98,27 +98,27 @@ const Navbar = () => {
        
         {
           title: "Housekeeping",
-          link: "/irvine/our-cleaning-services/housekeeping/",
+          link: "/housekeeping",
         },
         {
           title: "After Remodeling Cleaning",
-          link: "/irvine/our-cleaning-services/after-remodeling-cleaning/",
+          link: "/after-remodeling-cleaning",
         },
         {
           title: "Home Disinfection",
-          link: "/irvine/our-cleaning-services/home-disinfection/",
+          link: "/home-disinfection-cleaning",
         },
         {
           title: "Window Washing",
-          link: "/irvine/our-cleaning-services/window-washing/",
+          link: "/window-washing-cleaning",
         },
         {
           title: "Oven Cleaning",
-          link: "/irvine/our-cleaning-services/oven-cleaning/",
+          link: "/oven-cleaning",
         },
         {
           title: "Refrigerator Cleaning",
-          link: "/irvine/our-cleaning-services/refrigerator-cleaning/",
+          link: "/refrigenrator-cleaning",
         },
       ],
     },

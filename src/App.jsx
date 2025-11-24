@@ -20,6 +20,12 @@ import BondedAndInseure from "./pages/BondedAndInsured";
 import GreenCleaning  from "./pages/GreenCleaning";
 import SatisfactionGuaranted  from "./pages/SatisfactionGuaranted";
 import CleaningFrequencies from "./pages/CleaningFrequencies";
+import HouseKeeping from "./pages/cleaningservices/HouseKeeping";
+import AfterRemodelingCleaning from "./pages/cleaningservices/AfterRemodelingCleaning";
+import HomeDisinfection from "./pages/cleaningservices/HomeDisinfection";
+import WindowWashing from "./pages/cleaningservices/WindowWashing";
+import OvenCleaning from "./pages/cleaningservices/OvenCleaning";
+import RefrigeratorCleaning from "./pages/cleaningservices/RefrigeratorCleaning";
 
 
 const MainLayout = () => {
@@ -54,6 +60,12 @@ const router = createBrowserRouter([
       { path: "/greencleaning", element: <GreenCleaning/> },
       { path: "/satisfaction", element: <SatisfactionGuaranted/> },
       { path: "/cleaningfrequencies", element: <CleaningFrequencies/> },
+      { path: "/housekeeping", element: <HouseKeeping/> },
+      { path: "/after-remodeling-cleaning", element: <AfterRemodelingCleaning/> },
+      { path: "/home-disinfection-cleaning", element: <HomeDisinfection/> },
+      { path: "/window-washing-cleaning", element: <WindowWashing/> },
+      { path: "/oven-cleaning", element: <OvenCleaning/> },
+      { path: "/refrigenrator-cleaning", element: <RefrigeratorCleaning/> },
       
     ],
   },

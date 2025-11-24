@@ -9,14 +9,14 @@ const Header = () => {
           {/* LEFT GREEN PART - Hidden on mobile, visible on md+ screens */}
           <div className="hidden md:flex bg-[#66a038] items-center justify-center w-full md:w-[50%] h-32 md:h-30 z-30 px-6 md:px-12 order-1 md:order-1 transition-all duration-500 transform hover:scale-105">
             <h2 className="text-3xl md:text-5xl lg:text-5xl font-semibold text-white transition-all duration-500 transform hover:scale-105">
-              Apartment Cleaning
+              Home Destination Cleaning
             </h2>
           </div>
 
           {/* RIGHT IMAGE - Full width on mobile, partial on larger screens */}
           <div className="w-full md:w-[60%] h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] overflow-hidden relative z-20 md:-mt-16 md:ml-[-8%] order-2 md:order-2 rounded-lg shadow-xl transition-all duration-500 transform hover:scale-105 hover:shadow-2xl">
             <img
-              src="https://www.thecleaningauthority.com/assets/banner/general.2012151513550.jpg"
+              src="https://www.thecleaningauthority.com/assets/banner/Home-Disinfection.2012151737550.jpg"
               alt="Interior"
               className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110 hover:translate-x-2 hover:translate-y-2"
             />

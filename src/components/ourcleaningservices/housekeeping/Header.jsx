@@ -9,7 +9,7 @@ const Header = () => {
           {/* LEFT GREEN PART - Hidden on mobile, visible on md+ screens */}
           <div className="hidden md:flex bg-[#66a038] items-center justify-center w-full md:w-[50%] h-32 md:h-30 z-30 px-6 md:px-12 order-1 md:order-1 transition-all duration-500 transform hover:scale-105">
             <h2 className="text-3xl md:text-5xl lg:text-5xl font-semibold text-white transition-all duration-500 transform hover:scale-105">
-              Apartment Cleaning
+              House Keeping
             </h2>
           </div>
 
