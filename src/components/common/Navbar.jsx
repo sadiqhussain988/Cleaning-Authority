@@ -1,43 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-
-// Reusable Dropdown Component
-const DropdownMenu = ({ items, index, activeDropdown, toggleDropdown }) => {
-  return (
-    <div
-      className={`absolute top-full left-0 mt-1 w-50 bg-[#0067B6] rounded-lg shadow-lg text-white font-semibold opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-40`}
-    >
-      <div className="py-2">
-        {items.map((dropdownItem, dropdownIndex) => (
-          <Link
-            key={dropdownIndex}
-            to={dropdownItem.link}
-            target={dropdownItem.external ? "_blank" : "_self"}
-            className="block px-4 py-2 text-sm text-white hover:text-[#537c32] hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#005B8F] transition-all duration-200 transform"
-            aria-label={dropdownItem.title}
-          >
-            {dropdownItem.title}
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
-};
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
-  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  // Memoized callback functions
+  const toggleMobileMenu = useCallback(() => {
+    setIsMobileMenuOpen(prev => !prev);
+  }, []);
 
-  const toggleDropdown = (index) => {
-    setActiveDropdown(activeDropdown === index ? null : index);
-  };
+  const closeMobileMenu = useCallback(() => {
+    setIsMobileMenuOpen(false);
+    setActiveDropdown(null);
+  }, []);
 
+  const toggleDropdown = useCallback((index) => {
+    setActiveDropdown(prev => prev === index ? null : index);
+  }, []);
+
+  const closeDropdowns = useCallback(() => {
+    setActiveDropdown(null);
+  }, []);
+
+  // Menu items data
   const menuItems = [
     {
       title: "About Us",
-      link: "/irvine/about-us/",
+      link: "/about",
       dropdown: [
         { title: "Company History", link: "/about-us/company-history/" },
         { title: "Vision & Mission", link: "/about-us/vision-mission/" },
@@ -47,80 +37,36 @@ const Navbar = () => {
     },
     {
       title: "Why Hire Us?",
-      link: "/why-hire-us-/",
+      link: "/whyhireus",
       dropdown: [
-        {
-          title: "Detail-Clean Rotation System",
-          link: "/detail-clean-rotation-system",
-        },
-        { title: "Green Cleaning", link: "/green-cleaning/" },
-        {
-          title: "Satisfaction Guaranteed",
-          link: "/satisfaction-guaranteed/",
-        },
-        {
-          title: "Cleaning Frequencies",
-          link: "/cleaning-frequencies/",
-        },
-        { title: "Bonded & Insured", link: "/bonded-insured/" },
-        {
-          title: "Fully Trained Employees",
-          link: "/professionally-trained-employees/",
-        },
+        { title: "Detail-Clean Rotation System", link: "/detailrotaion" },
+        { title: "Green Cleaning", link: "/greencleaning" },
+        { title: "Satisfaction Guaranteed", link: "/satisfaction" },
+        { title: "Cleaning Frequencies", link: "/cleaningfrequencies" },
+        { title: "Bonded & Insured", link: "/bondedinsured" },
+        { title: "Fully Trained Employees", link: "/professionally-trained-employees/" },
         { title: "MyTCA App", link: "/mytca-app/" },
         { title: "The Cleaning Authority CARES", link: "/cares/" },
       ],
     },
     {
       title: "Our Services",
-      link: "/our-cleaning-services/",
+      link: "/housecleaning",
       dropdown: [
-        {
-          title: "House Cleaning",
-          link: "/housecleaning",
-        },
-        {
-          title: "Office Cleaning",
-          link: "/our-cleaning-services/office-cleaning/",
-        },
-        {
-          title: "Move In/Move Out",
-          link: "/irvine/our-cleaning-services/move-in-move-out-cleaning/",
-        },
-        {
-          title: "Apartment Cleaning",
-          link: "/irvine/our-cleaning-services/apartment-cleaning/",
-        },
-        {
-          title: "One-Time Cleans",
-          link: "/irvine/our-cleaning-services/one-time-cleans/",
-        },
-        {
-          title: "Housekeeping",
-          link: "/irvine/our-cleaning-services/housekeeping/",
-        },
-        {
-          title: "After Remodeling Cleaning",
-          link: "/irvine/our-cleaning-services/after-remodeling-cleaning/",
-        },
-        {
-          title: "Home Disinfection",
-          link: "/irvine/our-cleaning-services/home-disinfection/",
-        },
-        {
-          title: "Window Washing",
-          link: "/irvine/our-cleaning-services/window-washing/",
-        },
-        {
-          title: "Oven Cleaning",
-          link: "/irvine/our-cleaning-services/oven-cleaning/",
-        },
-        {
-          title: "Refrigerator Cleaning",
-          link: "/irvine/our-cleaning-services/refrigerator-cleaning/",
-        },
+        { title: "House Cleaning", link: "/housecleaning" },
+        { title: "Apartment Cleaning", link: "/apartmentcleaning" },
+        { title: "Move In/Move Out", link: "/moveinmoveout" },
+        { title: "One-Time Cleans", link: "/onetimeclean" },
+        { title: "Office Cleaning", link: "/officeclean" },
+        { title: "Housekeeping", link: "/housekeeping" },
+        { title: "After Remodeling Cleaning", link: "/after-remodeling-cleaning" },
+        { title: "Home Disinfection", link: "/home-disinfection-cleaning" },
+        { title: "Window Washing", link: "/window-washing-cleaning" },
+        { title: "Oven Cleaning", link: "/oven-cleaning" },
+        { title: "Refrigerator Cleaning", link: "/refrigenrator-cleaning" },
       ],
     },
+    { title: "Blog", link: "/blogpage" },
 
     { title: "Blog", link: "/blog" },
     { title: "FAQs", link: "/faq" },
@@ -128,80 +74,322 @@ const Navbar = () => {
     { title: "Special Offers", link: "/special-offers" },
   ];
 
+  // Dropdown Menu Component
+  const DropdownMenu = ({ items, isOpen, onClose }) => {
+    const dropdownRef = useRef(null);
+
+    useEffect(() => {
+      const handleClickOutside = (event) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+          onClose();
+        }
+      };
+
+      const handleEscape = (event) => {
+        if (event.key === "Escape") {
+          onClose();
+        }
+      };
+
+      if (isOpen) {
+        document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener("keydown", handleEscape);
+      }
+
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+        document.removeEventListener("keydown", handleEscape);
+      };
+    }, [isOpen, onClose]);
+
+    if (!isOpen) return null;
+
+    return (
+      <div
+        ref={dropdownRef}
+        className="absolute top-full left-0 mt-1 w-56 bg-[#0067B6] rounded-lg shadow-lg text-white font-semibold z-50 animate-fadeIn"
+        role="menu"
+        aria-orientation="vertical"
+      >
+        <div className="py-2">
+          {items.map((dropdownItem) => (
+            <Link
+              key={dropdownItem.link}
+              to={dropdownItem.link}
+              target={dropdownItem.external ? "_blank" : "_self"}
+              rel={dropdownItem.external ? "noopener noreferrer" : undefined}
+              className="block px-4 py-2 text-sm text-white hover:text-[#537c32] hover:bg-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-inset transition-all duration-200"
+              role="menuitem"
+              aria-label={dropdownItem.title}
+              onClick={onClose}
+            >
+              {dropdownItem.title}
+            </Link>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  // Mobile Menu Component
+  const MobileMenu = () => {
+    const menuRef = useRef(null);
+
+    useEffect(() => {
+      const handleEscape = (event) => {
+        if (event.key === "Escape") {
+          closeMobileMenu();
+        }
+      };
+
+      if (isMobileMenuOpen) {
+        document.addEventListener("keydown", handleEscape);
+        document.body.style.overflow = "hidden"; // Disable scrolling when the mobile menu is open
+      }
+
+      return () => {
+        document.removeEventListener("keydown", handleEscape);
+        document.body.style.overflow = "unset"; // Restore scrolling when the mobile menu is closed
+      };
+    }, [isMobileMenuOpen]);
+
+    if (!isMobileMenuOpen) return null;
+
+    return (
+      <div 
+        className="fixed inset-0  bg-black bg-opacity-50 z-50 lg:hidden" 
+        onClick={closeMobileMenu}
+        role="presentation"
+      >
+        <div 
+          ref={menuRef}
+          className="absolute top-0 right-0 h-full w-80 bg-white shadow-xl overflow-y-auto animate-slideInRight"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="px-6 py-8 space-y-4">
+            {/* Close Button */}
+            <button
+              onClick={closeMobileMenu}
+              className="absolute top-4 right-4 p-2 text-gray-500 hover:text-gray-700 transition-colors"
+              aria-label="Close menu"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Menu Items */}
+            {menuItems.map((item) => (
+              <div key={item.title} className="border-b border-gray-100 last:border-b-0">
+                <div className="flex items-center justify-between py-3">
+                  <Link
+                    to={item.link}
+                    className="flex-1 text-gray-800 font-medium hover:text-[#5f992f] transition-colors"
+                    onClick={closeMobileMenu}
+                  >
+                    {item.title}
+                  </Link>
+                  {item.dropdown && (
+                    <button
+                      onClick={() => toggleDropdown(menuItems.indexOf(item))}
+                      className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
+                      aria-expanded={activeDropdown === menuItems.indexOf(item)}
+                      aria-label={`Toggle ${item.title} dropdown`}
+                    >
+                      <svg
+                        className={`w-4 h-4 transform transition-transform ${
+                          activeDropdown === menuItems.indexOf(item) ? "rotate-180" : ""
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  )}
+                </div>
+
+                {/* Mobile Dropdown */}
+                {item.dropdown && activeDropdown === menuItems.indexOf(item) && (
+                  <div className="ml-4 mb-3 space-y-2 animate-fadeIn">
+                    {item.dropdown.map((dropdownItem) => (
+                      <Link
+                        key={dropdownItem.link}
+                        to={dropdownItem.link}
+                        target={dropdownItem.external ? "_blank" : "_self"}
+                        rel={dropdownItem.external ? "noopener noreferrer" : undefined}
+                        className="block py-2 text-sm text-gray-600 hover:text-[#5f992f] hover:bg-gray-50 rounded transition-colors px-3"
+                        onClick={closeMobileMenu}
+                      >
+                        {dropdownItem.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+
+            {/* Mobile Contact Info */}
+            <div className="pt-6 mt-6 border-t border-gray-200">
+              <div className="text-center space-y-4">
+                <div>
+                  <div className="font-semibold text-[#0079C1] mb-1">
+                    Call for a Free Estimate
+                  </div>
+                  <a
+                    href="tel:(949) 603-1973"
+                    className="text-lg font-semibold text-gray-900 hover:text-[#66A038] transition-colors block"
+                  >
+                    (949) 603-1973
+                  </a>
+                </div>
+                <a
+                  href="#"
+                  className="inline-block bg-[#66A038] hover:bg-[#5f992f] text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg w-full"
+                  onClick={closeMobileMenu}
+                >
+                  Free Estimate
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  // Desktop Menu Item Component
+  const DesktopMenuItem = ({ item, index }) => {
+    const [isHovered, setIsHovered] = useState(false);
+    const itemRef = useRef(null);
+
+    const isOpen = activeDropdown === index || isHovered;
+
+    return (
+      <div
+        ref={itemRef}
+        className="relative group"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        onFocus={() => setIsHovered(true)}
+        onBlur={() => setIsHovered(false)}
+      >
+        <Link
+          to={item.link}
+          className="flex items-center text-gray-700 font-medium px-4 py-2 hover:text-[#5f992f] transition-colors duration-300 group"
+          aria-haspopup={item.dropdown ? "true" : "false"}
+          aria-expanded={isOpen ? "true" : "false"}
+          onClick={closeDropdowns}
+        >
+          <span>{item.title}</span>
+          {item.dropdown && (
+            <svg
+              className="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          )}
+        </Link>
+
+        {/* Dropdown Menu */}
+        {item.dropdown && (
+          <DropdownMenu
+            items={item.dropdown}
+            isOpen={isOpen}
+            onClose={() => {
+              setIsHovered(false);
+              toggleDropdown(null);
+            }}
+          />
+        )}
+      </div>
+    );
+  };
+
   return (
     <header className="bg-white shadow-md border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4">
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes slideInRight {
+          from {
+            transform: translateX(100%);
+          }
+          to {
+            transform: translateX(0);
+          }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.2s ease-out;
+        }
+        .animate-slideInRight {
+          animation: slideInRight 0.3s ease-out;
+        }
+      `}</style>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center space-x-6">
-            <Link to="/irvine/" className="flex-shrink-0">
+            <Link 
+              to="/irvine/" 
+              className="flex-shrink-0" 
+              onClick={closeDropdowns}
+              aria-label="The Cleaning Authority Home"
+            >
               <img
                 alt="The Cleaning Authority"
                 src="https://www.thecleaningauthority.com/images/brand/logo-dark.2012151510180.png"
                 className="h-10 w-auto"
+                width={120}
+                height={40}
               />
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex space-x-6">
+            <nav className="hidden lg:flex space-x-1" aria-label="Main navigation">
               {menuItems.map((item, index) => (
-                <div key={index} className="relative group">
-                  <Link
-                    to={item.link}
-                    className="text-gray-700 font-medium px-4 py-2 hover:text-[#5f992f] transition-colors duration-300"
-                    aria-haspopup={item.dropdown ? "true" : "false"}
-                    aria-expanded={activeDropdown === index ? "true" : "false"}
-                  >
-                    <span>{item.title}</span>
-                    {item.dropdown && (
-                      <svg
-                        className="w-4 h-4 ml-auto transform group-hover:rotate-180 transition-transform"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    )}
-                  </Link>
-
-                  {/* Dropdown Menu */}
-                  {item.dropdown && (
-                    <DropdownMenu
-                      items={item.dropdown}
-                      index={index}
-                      activeDropdown={activeDropdown}
-                      toggleDropdown={toggleDropdown}
-                    />
-                  )}
-                </div>
+                <DesktopMenuItem
+                  key={item.title}
+                  item={item}
+                  index={index}
+                />
               ))}
             </nav>
           </div>
 
           {/* Right Actions */}
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-4 sm:space-x-6">
             <div className="hidden md:flex items-center space-x-4">
               <div className="text-right">
-                <div className=" font-semibold text-[#0079C1]">
+                <div className="text-sm font-semibold text-[#0079C1]">
                   Call for a Free Estimate
                 </div>
                 <a
                   href="tel:(949) 603-1973"
                   className="text-lg font-semibold text-gray-900 hover:text-[#66A038] transition-colors"
+                  aria-label="Call (949) 603-1973"
                 >
                   (949) 603-1973
                 </a>
               </div>
               <a
                 href="#"
-                className="bg-[#66A038] hover:bg-[#5f992f] text-white px-5 py-2 rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg"
+                className="bg-[#66A038] hover:bg-[#5f992f] text-white px-5 py-2.5 rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg whitespace-nowrap"
+                aria-label="Get a Free Estimate"
               >
                 Free Estimate
               </a>
@@ -209,23 +397,24 @@ const Navbar = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden flex flex-col space-y-1 p-2"
+              className="lg:hidden flex flex-col space-y-1.5 p-2 rounded-lg hover:bg-gray-100 transition-colors"
               onClick={toggleMobileMenu}
               aria-label="Toggle mobile menu"
+              aria-expanded={isMobileMenuOpen}
             >
               <span
-                className={`w-6 h-0.5 bg-gray-700 transition-transform ${
-                  isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
+                className={`w-6 h-0.5 bg-gray-700 transition-all duration-300 ${
+                  isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
                 }`}
               ></span>
               <span
-                className={`w-6 h-0.5 bg-gray-700 transition-opacity ${
+                className={`w-6 h-0.5 bg-gray-700 transition-all duration-300 ${
                   isMobileMenuOpen ? "opacity-0" : ""
                 }`}
               ></span>
               <span
-                className={`w-6 h-0.5 bg-gray-700 transition-transform ${
-                  isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+                className={`w-6 h-0.5 bg-gray-700 transition-all duration-300 ${
+                  isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
                 }`}
               ></span>
             </button>
@@ -234,82 +423,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div
-        className={`lg:hidden bg-white border-t border-gray-200 transition-all duration-300 ${
-          isMobileMenuOpen
-            ? "max-h-screen opacity-100"
-            : "max-h-0 opacity-0 overflow-hidden"
-        }`}
-      >
-        <div className="px-4 py-4 space-y-2">
-          {menuItems.map((item, index) => (
-            <div key={index}>
-              <button
-                onClick={() => item.dropdown && toggleDropdown(index)}
-                className="flex items-center justify-between w-full px-4 py-3 text-left text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
-              >
-                <Link to={item.link} className="flex-1">
-                  {item.title}
-                </Link>
-                {item.dropdown && (
-                  <svg
-                    className={`w-4 h-4 transform transition-transform ${
-                      activeDropdown === index ? "rotate-180" : ""
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                )}
-              </button>
-
-              {/* Mobile Dropdown */}
-              {item.dropdown && activeDropdown === index && (
-                <div className="ml-4 mt-1 space-y-1">
-                  {item.dropdown.map((dropdownItem, dropdownIndex) => (
-                    <Link
-                      key={dropdownIndex}
-                      to={dropdownItem.link}
-                      target={dropdownItem.external ? "_blank" : "_self"}
-                      className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 hover:text-blue-600 rounded transition-colors"
-                    >
-                      {dropdownItem.title}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-
-          {/* Mobile Contact Info */}
-          <div className="pt-4 border-t border-gray-200">
-            <div className="text-center">
-              <div className=" font-semibold text-[#0079C1] mb-2">
-                Call for a Free Estimate
-              </div>
-              <a
-                href="tel:(949) 603-1973"
-                className="text-lg font-semibold text-blue-600 block mb-4"
-              >
-                (949) 603-1973
-              </a>
-              <a
-                href="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1&s=5"
-                className="bg-[#66A038] hover:bg-[#5f992f] text-white px-6 py-3 rounded-lg font-semibold transition-colors block"
-              >
-                Free Estimate
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <MobileMenu />
     </header>
   );
 };

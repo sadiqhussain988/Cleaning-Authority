@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { FaPhone, FaQuoteLeft, FaFacebook, FaTwitter, FaGoogle, FaPinterest, FaYoutube, FaRss, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaCreditCard, FaCashRegister } from 'react-icons/fa';
+import { 
+  FaPhone, FaQuoteLeft, FaFacebook, FaTwitter, FaGoogle, FaPinterest, 
+  FaYoutube, FaRss, FaInstagram, FaLinkedin, FaMapMarkerAlt, 
+  FaCreditCard, FaCashRegister 
+} from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -44,6 +48,7 @@ function Footer() {
     { name: 'Discover', icon: <FaCreditCard /> }
   ];
 
+  // 🔥 FIXED: Added return wrapper for JSX
   return (
     <footer className="bg-[#0079C1] overflow-x-hidden py-5 text-white">
       <div 
@@ -59,6 +64,7 @@ function Footer() {
               <FaQuoteLeft className="w-6 h-6 mb-1 group-hover:scale-110 transition-transform" />
               <span className="text-sm font-semibold">Get Pricing</span>
             </a>
+
             <a 
               href="tel:(949) 603-1973" 
               className="flex flex-col items-center text-white hover:text-blue-100 transition-colors group"
@@ -83,7 +89,7 @@ function Footer() {
                 className="h-12 w-auto mb-4"
               />
             </a>
-            
+
             <div className="space-y-2">
               <strong className="text-lg block">Call Now for a Free Estimate!</strong>
               <a 
@@ -116,82 +122,22 @@ function Footer() {
             <div className="space-y-4">
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                <li>
-                  <a href="/irvine/about-us/" className="text-gray-300 hover:text-white transition-colors quick-link">
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a href="/irvine/about-us/reviews/" className="text-gray-300 hover:text-white transition-colors quick-link">
-                    Reviews
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="/franchise/?SPPC=Offline&sppccampaignid=383896" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white transition-colors quick-link"
-                  >
-                    Own a Franchise
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="https://myaccount.thecleaningauthority.com/Account/Login?locationId=274" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white transition-colors quick-link"
-                  >
-                    MyTCA Account
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="https://gifts.thecleaningauthority.com/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white transition-colors quick-link"
-                  >
-                    Gift Certificates
-                  </a>
-                </li>
-                <li>
-                  <a href="/our-family/" className="text-gray-300 hover:text-white transition-colors quick-link">
-                    Our Brand Family
-                  </a>
-                </li>
+                <li><a href="/irvine/about-us/" className="text-gray-300 hover:text-white quick-link">About Us</a></li>
+                <li><a href="/irvine/about-us/reviews/" className="text-gray-300 hover:text-white quick-link">Reviews</a></li>
+                <li><a href="/franchise/?SPPC=Offline&sppccampaignid=383896" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white quick-link">Own a Franchise</a></li>
+                <li><a href="https://myaccount.thecleaningauthority.com/Account/Login?locationId=274" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white quick-link">MyTCA Account</a></li>
+                <li><a href="https://gifts.thecleaningauthority.com/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white quick-link">Gift Certificates</a></li>
+                <li><a href="/our-family/" className="text-gray-300 hover:text-white quick-link">Our Brand Family</a></li>
               </ul>
             </div>
 
             <div className="space-y-4">
               <h3 className="text-lg font-semibold mb-4">Legal</h3>
               <ul className="space-y-2">
-                <li>
-                  <a 
-                    href="/irvine/site-map/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white transition-colors quick-link"
-                  >
-                    Site Map
-                  </a>
-                </li>
-                <li>
-                  <a href="/privacy-policy/" className="text-gray-300 hover:text-white transition-colors quick-link">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="/ada-notice/" className="text-gray-300 hover:text-white transition-colors quick-link">
-                    ADA Notice
-                  </a>
-                </li>
-                <li>
-                  <a href="/privacy-policy/consumer-protection/" className="text-gray-300 hover:text-white transition-colors quick-link">
-                    Your Privacy Choices
-                  </a>
-                </li>
+                <li><a href="/irvine/site-map/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white quick-link">Site Map</a></li>
+                <li><a href="/privacy-policy/" className="text-gray-300 hover:text-white quick-link">Privacy Policy</a></li>
+                <li><a href="/ada-notice/" className="text-gray-300 hover:text-white quick-link">ADA Notice</a></li>
+                <li><a href="/privacy-policy/consumer-protection/" className="text-gray-300 hover:text-white quick-link">Your Privacy Choices</a></li>
               </ul>
             </div>
           </div>
@@ -208,7 +154,6 @@ function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-[#0079C1] hover:bg-[#66A038] rounded-full flex items-center justify-center transition-colors"
-                    aria-label={social.name}
                   >
                     {social.icon}
                   </a>
@@ -231,30 +176,23 @@ function Footer() {
               </div>
             </div>
           </div>
+
         </div>
       </div>
 
       <div className="text-center space-y-1 text-sm text-gray-100">
-        <div>
-          <strong className="block mb-2">
-            © 2025 The Cleaning Authority Franchising SPE LLC. All rights reserved. Each location individually owned and operated.
-          </strong>
-          <a 
-            href="/privacy-policy/consumer-protection/" 
-            className="text-white transition-colors"
-          >
-            Do Not Sell My Information - California Residents
-          </a>
-        </div>
+        <strong className="block mb-2">
+          © 2025 The Cleaning Authority Franchising SPE LLC. All rights reserved. Each location individually owned and operated.
+        </strong>
+        <a href="/privacy-policy/consumer-protection/" className="text-white">
+          Do Not Sell My Information - California Residents
+        </a>
       </div>
-      
+
       <style jsx>{`
-        /* Add these styles for the hover effect */
         .quick-link {
           position: relative;
-          display: inline-block;
         }
-
         .quick-link::before,
         .quick-link::after {
           content: '';
@@ -264,19 +202,16 @@ function Footer() {
           background-color: white;
           transition: width 0.3s ease;
         }
-
         .quick-link::before {
           bottom: 0;
           left: 50%;
           transform: translateX(-50%);
         }
-
         .quick-link::after {
           top: 0;
           left: 50%;
           transform: translateX(-50%);
         }
-
         .quick-link:hover::before,
         .quick-link:hover::after {
           width: 100%;
