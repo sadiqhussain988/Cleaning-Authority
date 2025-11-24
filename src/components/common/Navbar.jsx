@@ -37,7 +37,7 @@ const Navbar = () => {
   const menuItems = [
     {
       title: "About Us",
-      link: "/irvine/about-us/",
+      link: "/about",
       dropdown: [
         { title: "Company History", link: "/about-us/company-history/" },
         { title: "Vision & Mission", link: "/about-us/vision-mission/" },
@@ -47,22 +47,22 @@ const Navbar = () => {
     },
     {
       title: "Why Hire Us?",
-      link: "/why-hire-us-/",
+      link: "/whyhireus",
       dropdown: [
         {
           title: "Detail-Clean Rotation System",
-          link: "/detail-clean-rotation-system",
+          link: "/detailrotaion",
         },
-        { title: "Green Cleaning", link: "/green-cleaning/" },
+        { title: "Green Cleaning", link: "/greencleaning" },
         {
           title: "Satisfaction Guaranteed",
-          link: "/satisfaction-guaranteed/",
+          link: "/satisfaction",
         },
         {
           title: "Cleaning Frequencies",
-          link: "/cleaning-frequencies/",
+          link: "/cleaningfrequencies",
         },
-        { title: "Bonded & Insured", link: "/bonded-insured/" },
+        { title: "Bonded & Insured", link: "/bondedinsured" },
         {
           title: "Fully Trained Employees",
           link: "/professionally-trained-employees/",
@@ -73,56 +73,57 @@ const Navbar = () => {
     },
     {
       title: "Our Services",
-      link: "/our-cleaning-services/",
+      link: "/housecleaning",
       dropdown: [
         {
           title: "House Cleaning",
           link: "/housecleaning",
         },
         {
-          title: "Office Cleaning",
-          link: "/our-cleaning-services/office-cleaning/",
-        },
-        {
-          title: "Move In/Move Out",
-          link: "/irvine/our-cleaning-services/move-in-move-out-cleaning/",
-        },
-        {
           title: "Apartment Cleaning",
-          link: "/irvine/our-cleaning-services/apartment-cleaning/",
+          link: "/apartmentcleaning",
+        },
+         {
+          title: "Move In/Move Out",
+          link: "/moveinmoveout",
+        },
+         {
+          title: "One-Time Cleans",
+          link: "/onetimeclean",
         },
         {
-          title: "One-Time Cleans",
-          link: "/irvine/our-cleaning-services/one-time-cleans/",
-        },
+          title: "Office Cleaning",
+          link: "/officeclean",
+        },     
+       
         {
           title: "Housekeeping",
-          link: "/irvine/our-cleaning-services/housekeeping/",
+          link: "/housekeeping",
         },
         {
           title: "After Remodeling Cleaning",
-          link: "/irvine/our-cleaning-services/after-remodeling-cleaning/",
+          link: "/after-remodeling-cleaning",
         },
         {
           title: "Home Disinfection",
-          link: "/irvine/our-cleaning-services/home-disinfection/",
+          link: "/home-disinfection-cleaning",
         },
         {
           title: "Window Washing",
-          link: "/irvine/our-cleaning-services/window-washing/",
+          link: "/window-washing-cleaning",
         },
         {
           title: "Oven Cleaning",
-          link: "/irvine/our-cleaning-services/oven-cleaning/",
+          link: "/oven-cleaning",
         },
         {
           title: "Refrigerator Cleaning",
-          link: "/irvine/our-cleaning-services/refrigerator-cleaning/",
+          link: "/refrigenrator-cleaning",
         },
       ],
     },
 
-    { title: "Blog", link: "/articles/" },
+    { title: "Blog", link: "/blogpage" },
     { title: "FAQs", link: "/faq" },
     { title: "Jobs", link: "/cleaning-jobs/" },
     { title: "Special Offers", link: "/special-offers" },

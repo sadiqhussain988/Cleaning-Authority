@@ -18,7 +18,7 @@ export default function HeroSection() {
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 pt-20">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 ">
         <h1 className="text-3xl md:text-5xl text-white mb-4">
           Enjoy Your <span className="font-bold text-[#66A038]">Freshly Cleaned</span> Home
         </h1>
