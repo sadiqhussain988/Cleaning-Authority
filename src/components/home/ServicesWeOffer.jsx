@@ -186,7 +186,7 @@ const ServicesSection = () => {
                   {service.description}
                 </p>
 
-                <span className="inline-block px-6 py-3 bg-blue-600 text-white rounded-md shadow-md transform group-hover:translate-y-1 transition-all duration-300">
+                <span className="inline-block px-6 py-3 bg-[#66A038] hover:bg-blue-500 text-white rounded-md shadow-md transform group-hover:translate-y-1 transition-all duration-300">
                   Learn More
                 </span>
               </a>
