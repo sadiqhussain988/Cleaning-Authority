@@ -14,9 +14,7 @@ const JobMissionSection = () => {
           Work where company values match yours
         </h2>
 
-        {/* Mission row */}
         <div className="grid gap-10 md:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] md:items-center">
-          {/* LEFT: image card */}
           <div
             className="flex justify-center"
             data-aos="fade-right"

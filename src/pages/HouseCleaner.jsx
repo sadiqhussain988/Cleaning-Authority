@@ -4,7 +4,6 @@ import JobDetailsSection from '../components/job/housecleaner/JobDetailsSection'
 import JobCtaSection from '../components/job/JobCtaSection'
 import BrandsFamilySection from '../components/job/BrandsFamilySection'
 import JobNavbar from '../components/job/JobNavbar'
-// import HousecleanerStorySection from '../components/job/housecleaner/HousecleanerStorySection'
 
 const HouseCleaner = () => {
   return (
