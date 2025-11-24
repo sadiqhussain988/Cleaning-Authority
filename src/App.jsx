@@ -13,36 +13,44 @@ import WhyJoin from "./pages/WhyJoin";
 import Faq from "./pages/Faq";
 import Special from "./pages/SpecialOffer";
 import Print from "./components/specialoffer/Print";
-import HouseCleaning from "./pages/cleaningservices/HouseCleaning";
-import ApartmentCleaning from "./pages/cleaningservices/ApartmentCleaning";
-import MoveInMoveOutCleaning from "./pages/cleaningservices/MoveInMoveOutCleaning";
-import OneTimeClean from "./pages/cleaningservices/OneTimeClean";
-import OfficeCleaning from "./pages/cleaningservices/OfficeCleaning";
-import DetailCleanRotationSystem from "./pages/DetailCleanRotationSystem";
-import WhyHireUs from "./pages/WhyHireUs";
-import BlogPage from "./pages/BlogPage";
-import BondedAndInseure from "./pages/BondedAndInsured";
-import GreenCleaning  from "./pages/GreenCleaning";
-import SatisfactionGuaranted  from "./pages/SatisfactionGuaranted";
-import CleaningFrequencies from "./pages/CleaningFrequencies";
-import HouseKeeping from "./pages/cleaningservices/HouseKeeping";
-import AfterRemodelingCleaning from "./pages/cleaningservices/AfterRemodelingCleaning";
-import HomeDisinfection from "./pages/cleaningservices/HomeDisinfection";
-import WindowWashing from "./pages/cleaningservices/WindowWashing";
-import OvenCleaning from "./pages/cleaningservices/OvenCleaning";
-import RefrigeratorCleaning from "./pages/cleaningservices/RefrigeratorCleaning";
+import CompanyHistory from "./pages/CompanyHistory.JSX";
+import VisionMission from "./pages/VisionMission";
+import Reviews from "./pages/Reviews";
+import OwnFranchise from "./pages/OwnFranchise";
 
+import React from 'react'
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
+import Header from './components/common/Header'
+import Navbar from './components/common/Navbar'
+import Footer from './components/common/Footer'
+import Home from './pages/Home'
+import About from './pages/About'
+import Faq from './pages/Faq'
+import Special from './pages/SpecialOffer'
+import Print from './components/specialoffer/Print'
+import OneTimeCleans from './pages/cleaningservices/OneTimeCleans'
+import WhyHireUs from './pages/WhyHireUs'
+import DetailCleanRotationSystem from './pages/DetailCleanRotationSystem'
+import GreenCleaning from './pages/GreenCleaning'
+import SatisfactionGuaranted from './pages/SatisfactionGuaranted'
+import CleaningFrequencies from './pages/CleaningFrequencies'
+import BondedAndInsured from './pages/BondedAndInsured'
+import TrainedEmployees from './pages/TrainedEmployees'
+import TcaApp from './pages/TcaApp'
+import CleaningAuthorityCares from './pages/CleaningAuthorityCares'
+import HowToHelp from './pages/HowToHelp'
+import LocallyOwned from './pages/LOcallyOwned'
 
 const MainLayout = () => {
   return (
-    <div className="overflow-x-hidden">
-      <Header/>
-      <Navbar/>
-      <Outlet /> 
-      <Footer/>
+    <div className='overflow-x-hidden'>
+      <Header />
+      <Navbar />
+      <Outlet />
+      <Footer />
     </div>
-  );
-};
+  )
+}
 
 const router = createBrowserRouter([
   {
@@ -50,19 +58,10 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home/> },
       { path: "/about", element: <About/> },
-      { path: "/jobs", element: <Job/> },
-      { path: "/jobs/housecleaners", element: <HouseCleaner/> },
-      { path: "/jobs/team-leaders-trainers", element: <TeamLeader/> },
-      { path: "/jobs/managers", element: <Manager/> },
-      { path: "/jobs/why-join", element: <WhyJoin/> },
-
-
-
-
-
-
-
-
+      { path: "/companyhistory", element: <CompanyHistory/> },
+      { path: "/visionmission", element: <VisionMission/> },
+      { path: "/ownfranchise", element: <OwnFranchise/> },
+      { path: "/reviews", element: <Reviews/> },
       { path: "/faq", element: <Faq/> },
       { path: "/special-offers", element: <Special/> },
       { path: "/print", element: <Print/> },
@@ -91,6 +90,46 @@ const router = createBrowserRouter([
 
 function App() {
   return <RouterProvider router={router} />;
+      { path: '/', element: <Home /> },
+      { path: '/about', element: <About /> },
+      { path: '/faq', element: <Faq /> },
+      { path: '/special-offers', element: <Special /> },
+      { path: '/print', element: <Print /> },
+      { path: '/one-time-cleans', element: <OneTimeCleans /> },
+      { path: '/why-hire-us', element: <WhyHireUs /> },
+      {
+        path: '/detail-clean-rotation-system',
+        element: <DetailCleanRotationSystem />
+      },
+      { path: '/green-cleaning', element: <GreenCleaning /> },
+      { path: '/satisfaction-guaranteed', element: <SatisfactionGuaranted /> },
+      { path: '/cleaning-frequencies', element: <CleaningFrequencies /> },
+      { path: '/bonded-insured', element: <BondedAndInsured /> },
+      {
+ path: '/fully-trained-employees',
+        element: <TrainedEmployees />},
+      {
+        path: '/mytca-app',
+        element: <TcaApp />
+      },
+       {
+        path: '/the-cleaning-authority-cares',
+        element: <CleaningAuthorityCares />
+      },
+      {
+        path: '/how-to-help',
+        element: <HowToHelp />
+      },
+      {
+        path: '/locally-owned',
+        element: <LocallyOwned />
+      }
+    ]
+  }
+])
+
+function App () {
+  return <RouterProvider router={router} />
 }
 
-export default App;
+export default App

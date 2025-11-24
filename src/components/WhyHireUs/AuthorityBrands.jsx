@@ -70,7 +70,7 @@ const AuthorityBrands = () => {
                 <img 
                   src={brand.src} 
                   alt={brand.alt}
-                  className="h-12 max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+                  className="h-12 max-w-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
                   onError={(e) => {
                     e.target.style.display = 'none';
                   }}

@@ -3,7 +3,7 @@ import React from 'react';
 const FreeEstimate = () => {
   return (
     <section
-      className="flex flex-col items-center justify-center mx-auto max-w-5xl min-h-[200px] md:min-h-[500px] lg:min-h-[150px] mb-10 md:mb-20 bg-[#0079C1] text-white mt-20 rounded-md px-4 md:px-6"
+      className="flex flex-col items-center justify-center mx-auto max-w-5xl min-h-[200px] md:min-h-[500px] lg:min-h-[150px] mb-10 md:mb-20 bg-[#0079C1] text-white mt-20 rounded-md px-4 md:px-8 py-10"
       data-aos="fade-up"
     >
       {/* Heading */}
@@ -12,9 +12,14 @@ const FreeEstimate = () => {
       </h1>
 
       {/* Button */}
-      <button className="flex items-center gap-2 bg-[#4fa33a] px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-lg text-white hover:bg-[#e6f5f8] hover:text-[#2a8bdc] transition-all duration-300 uppercase text-sm sm:text-md md:text-lg">
+      <a
+        href="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=459&c=1&utm_campaign=&utm_source=Scorpion%20Advertising&utm_medium=&utm_content=&fbclid=&t=888.658.0659&sa=-1736993544"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 bg-[#4fa33a] px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-lg text-white hover:bg-[#e6f5f8] hover:text-[#2a8bdc] transition-all duration-300 uppercase text-sm sm:text-md md:text-lg"
+      >
         Get A Free Estimate
-      </button>
+      </a>
     </section>
   );
 };
