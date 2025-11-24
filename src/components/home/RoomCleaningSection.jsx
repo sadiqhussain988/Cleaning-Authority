@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 export default function RoomCleaningSection() {
   useEffect(() => {
@@ -69,9 +70,11 @@ export default function RoomCleaningSection() {
             basis. <br /> This ensures your home is always thoroughly cleaned and
             sanitized, from <br /> the areas you use daily to that hard-to-clean grout!
           </p>
+         <Link to="/detail-clean-rotaion-system">
           <button className="bg-[#66A038] text-white px-5 py-2 rounded-md hover:bg-blue-500 transition">
             LEARN ABOUT OUR SYSTEM
           </button>
+         </Link>
         </div>
       </div>
     </section>
