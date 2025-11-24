@@ -45,7 +45,7 @@ const router = createBrowserRouter([
       { path: "/satisfaction-guaranteed", element: <SatisfactionGuaranted/>},
       { path: "/cleaning-frequencies", element: <CleaningFrequencies/>},
       { path: "/bonded-insured", element: <BondedAndInsured/>},
-       { path: "/blog", element: <BlogPage /> },               // All blogs
+      { path: "/blog", element: <BlogPage /> },               // All blogs
       { path: "/blog/:category", element: <BlogPage /> },     // Optional: category view
       { path: "/blog/:category/:slug", element: <BlogPage /> }, // Blog detail
       

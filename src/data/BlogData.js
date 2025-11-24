@@ -5,9 +5,7 @@ export const blogs = [
     title: "Benefits of Green Cleaning",
     author: "The Cleaning Authority",
     image: "/images/TCA_BenefitsofGreenCleaning_Blog_MainHeader2.2104210847296.jpg",
-    intro: `At The Cleaning Authority, we believe in providing the best service possible to our customers so that their homes can be the clean, comfortable background to the rest of their lives. That is why we feel it is important to use products that are the safest for you, your family, your pets, and the environment. 
-
- Each of our locations use cleaning products that are environmentally responsible or sustainable.* Learn more about why green cleaning is so important below.`,
+    intro: `At The Cleaning Authority, we believe in providing the best service possible to our customers so that their homes can be the clean, comfortable background to the rest of their lives. That is why we feel it is important to use products that are the safest for you, your family, your pets, and the environment. Each of our locations use cleaning products that are environmentally responsible or sustainable.* Learn more about why green cleaning is so important below.`,
     sections: [
       {
         title: "Safer for the Environment", content: `Green cleaning products are naturally derived, non-toxic, and biodegradable, meaning they have less impact on the environment. Other chemical cleaning products may contain ingredients from non-renewable sources and have toxic impacts that can hurt the world’s eco-system.
@@ -52,5 +50,76 @@ If you are looking for a truly green clean of your whole home, visit The Cleanin
     ]
 
   },
+
+  {
+  slug: "mental-health-benefits-of-a-clean-home",
+  category: "Healthy Living",
+  title: "The Mental Health Benefits of a Clean Home",
+  author: "The Cleaning Authority",
+  image: "/images/Mental-Health-Photo.jpg",
+
+  intro: `In the hustle and bustle of daily life, it's easy to overlook the importance of maintaining a clean and organized living space. However, research from the Journal of Environmental Psychology shows that a clean home can significantly improve mental clarity, reduce stress, and promote a more positive mindset.`,
+
+ sections: [
+      {
+        title: "How Do Germs Spread in a School?",
+        content: `Germs are transmitted via:
+• Direct contact (handshakes, hugs)
+• Touching contaminated surfaces like doorknobs, desks, or computer mice
+• Airborne particles from coughing or sneezing
+
+The spread of cold, flu, viral, or bacterial illnesses is often worsened due to:
+• Large class sizes
+• Crowded hallways and mingling at lunch
+• Lack of proper hygiene habits (handwashing, covering sneezes)
+• Highly contagious strains that spread faster than usual`,
+      },
+      {
+        title: "How to Prevent The Spread of Germs at School and at Home",
+        content: `According to the Centers for Disease Control and Prevention (CDC), cleaning frequently touched surfaces is one of the most effective ways to stop germs from spreading.
+
+Here are practical steps families can take at home:
+
+1. **Clean and sanitize surfaces regularly:**  
+   Children will inevitably bring germs home. Sanitizing surfaces such as tables, countertops, doorknobs, and light switches helps reduce the spread of illnesses in your household.
+
+2. **Clean school supplies:**  
+   Lunch boxes, water bottles, backpacks, binders, and pencil cases can carry germs. Clean them frequently.
+
+3. **Keep up with laundry:**  
+   Items like mittens, scarves, blankets, coats, and sweatshirts may hold germs—especially if kids sneeze into their sleeves!
+
+4. **Remove shoes at the door:**  
+   Shoes track dirt, dust, and germs inside. Encourage everyone to remove them at the entrance.
+
+5. **Sanitize electronics:**  
+   Frequently touched devices such as tablets, smartphones, remotes, and laptops should be cleaned regularly.
+
+6. **Prioritize bathroom cleaning:**  
+   Many germs spread through contaminated fluids. Disinfect sinks, toilets, and bathroom surfaces regularly.`,
+      },
+      {
+        title: "Additional Tips for Families",
+        content: `• **Encourage proper hygiene:**  
+  Students should wash their hands after using the restroom, sneezing, before eating, and immediately after coming home.
+
+• Teach the 20-second rule:  
+  Kids should wash hands with soap for 20 seconds (two rounds of “Happy Birthday”).
+
+• Send hand sanitizer: 
+  A small sanitizer bottle in their backpack helps maintain hygiene at school.
+
+• **Keep sick children home:**  
+  Contagious students should stay home from school, daycare, or extracurricular activities.`,
+      },
+      {
+        title: "Prevent the Spread of Germs at School — Starting at Home",
+        content: `You may not be able to control what your child touches at school, but you *can* reduce their exposure at home. Maintaining a clean environment and proper hygiene habits significantly lowers the risk of spreading illness within your family.
+
+The Cleaning Authority can help you keep your home sanitized and germ-free. Take some stress off your plate this school season—get a free estimate online or call (888) 658-0659 today!`,
+      },
+    ],
+}
+
 
 ];

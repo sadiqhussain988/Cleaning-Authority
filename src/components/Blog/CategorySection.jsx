@@ -4,7 +4,7 @@ import { FaArrowRight, FaTags } from "react-icons/fa";
 
 const CategorySection = ({ category, onSelectBlog }) => {
   return (
-    <section className="relative py-16 border-b border-gray-200/60 last:border-b-0">
+    <section className="relative py-16 border-b border-[#66a038] last:border-b-0">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-gray-50/50 -z-10" />
       

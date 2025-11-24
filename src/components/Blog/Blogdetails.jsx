@@ -51,12 +51,22 @@ const BlogDetail = ({ blog, setSelectedBlog }) => {
 
             {/* Featured Image */}
             {blog.image && (
-              <div className="mb-6 sm:mb-8 w-full flex justify-center">
-                <img
-                  src={blog.image}
-                  alt={blog.title}
-                  className="w-[350px] max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl h-80 object-cover rounded-xl  shadow-2xl shadow-green-200 "
-                />
+              <div className="mb-6 sm:mb-8 flex justify-center">
+                <div className="group cursor-pointer relative">
+                  <div className="w-96 h-56 rounded-xl overflow-hidden 
+                     border border-gray-200 dark:border-gray-700
+                     shadow-lg hover:shadow-xl transition-all duration-400 relative">
+                    {/* Background shine effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent 
+                      -translate-x-full group-hover:translate-x-full transition-transform duration-1000 z-10" />
+                    <img
+                      src={blog.image}
+                      alt={blog.title}
+                      className="w-full h-full object-cover transition-transform duration-600
+                   group-hover:scale-110 relative z-0"
+                    />
+                  </div>
+                </div>
               </div>
             )}
 
@@ -76,10 +86,10 @@ const BlogDetail = ({ blog, setSelectedBlog }) => {
                 key={i}
                 className="mb-6 sm:mb-8 p-4 sm:p-6 rounded-xl hover:bg-gray-50 transition-colors duration-300 border border-transparent hover:border-gray-200"
               >
-                <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 flex items-center gap-2">
+                <p className=" flex items-center gap-2 text-[#0079c1]">
                   <span className="w-2 h-2 bg-green-500 rounded-full"></span>
                   {section.title}
-                </h2>
+                </p>
                 <p className="text-gray-700 leading-relaxed text-base  ">
                   {section.content}
                 </p>
@@ -103,9 +113,16 @@ const BlogDetail = ({ blog, setSelectedBlog }) => {
                 {[FaTwitter, FaLinkedin, FaFacebook].map((Icon, idx) => (
                   <button
                     key={idx}
-                    className="w-10 h-10 rounded-full bg-[#66a038]/90 flex items-center justify-center hover:bg-[#66a038] transition-colors duration-200 shadow-sm"
+                    className="w-10 h-10 rounded-full bg-[#66a038]/90 flex items-center justify-center 
+                 hover:bg-[#66a038] transition-all duration-500 shadow-sm 
+                 hover:scale-110 hover:shadow-lg group relative overflow-hidden"
                   >
-                    <Icon className="w-4 h-4 text-white" />
+                    {/* Background shine effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent 
+                     -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+
+                    <Icon className="w-4 h-4 text-white relative z-10 transition-all duration-500 
+                      group-hover:scale-125 group-hover:rotate-90" />
                   </button>
                 ))}
               </div>
