@@ -3,12 +3,14 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Header from "./components/common/Header";
 import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
-import Header from "./components/common/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Faq from "./pages/Faq";
 import Special from "./pages/SpecialOffer";
 import Print from "./components/specialoffer/Print";
+import CompanyHistory from "./pages/CompanyHistory.JSX";
+import VisionMission from "./pages/VisionMission";
+import Reviews from "./pages/Reviews";
 
 
 const MainLayout = () => {
@@ -28,6 +30,9 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home/> },
       { path: "/about", element: <About/> },
+      { path: "/companyhistory", element: <CompanyHistory/> },
+      { path: "/visionmission", element: <VisionMission/> },
+      { path: "/reviews", element: <Reviews/> },
       { path: "/faq", element: <Faq/> },
       { path: "/special-offers", element: <Special/> },
       { path: "/print", element: <Print/> },
