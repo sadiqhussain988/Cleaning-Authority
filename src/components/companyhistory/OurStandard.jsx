@@ -29,22 +29,22 @@ const Card = ({ title, items }) => {
 
 const OurStandard = () => {
   const firstCardItems = [
-    { name: "Apartment Cleanings", link: "https://www.thecleaningauthority.com/our-cleaning-services/apartment-condo-cleaning/" },
+    { name: "Apartment Cleanings", link: "/apartmentcleaning" },
     { name: "Carpet Cleaning", link: "https://www.thecleaningauthority.com/our-cleaning-services/carpet-cleaning/" },
-    { name: "Clean Up After Remodeling", link: "https://www.thecleaningauthority.com/our-cleaning-services/post-construction-cleaning/" },
+    { name: "Clean Up After Remodeling", link: "/after-remodeling-cleaning" },
     { name: "Basement Cleaning", link: "https://www.thecleaningauthority.com/our-cleaning-services/basement-cleaning/" },
     { name: "Commercial Cleaning", link: "https://www.thecleaningauthority.com/our-cleaning-services/commercial-cleaning/" },
-    { name: "Office Cleaning", link: "https://www.thecleaningauthority.com/our-cleaning-services/office-cleaning/" },
-    { name: "Green Cleaning", link: "https://www.thecleaningauthority.com/why-hire-us-/green-cleaning/" },
+    { name: "Office Cleaning", link: "/officeclean" },
+    { name: "Green Cleaning", link: "/green-cleaning" },
   ];
 
   const secondCardItems = [
-    { name: "Housekeeping", link: "https://www.thecleaningauthority.com/our-cleaning-services/housekeeping/" },
-    { name: "Move In / Move Out Cleaning", link: "https://www.thecleaningauthority.com/our-cleaning-services/move-in-move-out-cleaning/" },
-    { name: "One-Time Cleans", link: "https://www.thecleaningauthority.com/our-cleaning-services/one-time-cleans/" },
-    { name: "Oven Cleaning", link: "https://www.thecleaningauthority.com/our-cleaning-services/oven-cleaning/" },
-    { name: "Refrigerator Cleaning", link: "https://www.thecleaningauthority.com/our-cleaning-services/refrigerator-cleaning/" },
-    { name: "House / Residential Cleaning", link: "https://www.thecleaningauthority.com/our-cleaning-services/house-cleaning/" },
+    { name: "Housekeeping", link: "/housekeeping" },
+    { name: "Move In / Move Out Cleaning", link: "/moveinmoveout" },
+    { name: "One-Time Cleans", link: "/onetimeclean" },
+    { name: "Oven Cleaning", link: "/oven-cleaning" },
+    { name: "Refrigerator Cleaning", link: "/refrigenrator-cleaning" },
+    { name: "House / Residential Cleaning", link: "/housecleaning" },
   ];
 
   return (

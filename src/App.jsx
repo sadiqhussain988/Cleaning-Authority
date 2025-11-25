@@ -93,6 +93,7 @@ const router = createBrowserRouter([
       { path: "/the-cleaning-authority-cares", element: <CleaningAuthorityCares/> },
       { path: "/how-to-help", element: <HowToHelp/> },
       { path: "/locally-owned", element: <LocallyOwned/> },
+      { path: "/our-services", element: <OurServices/> },
      
       { path: "/housekeeping", element: <HouseKeeping/> },
       { path: "/after-remodeling-cleaning", element: <AfterRemodelingCleaning/> },

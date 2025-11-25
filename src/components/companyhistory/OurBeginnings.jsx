@@ -32,22 +32,22 @@ const OurBeginnings = () => {
                         <SidebarLink 
                             text="Company History" 
                             active={true} 
-                            href="https://www.thecleaningauthority.com/about-us/company-history/" 
+                            href="/company-history" 
                             target="_blank"
                         />
                         <SidebarLink 
                             text="Vision & Mission" 
-                            href="https://www.thecleaningauthority.com/about-us/vision-mission/" 
+                            href="/vision-mishion" 
                             target="_blank"
                         />
                         <SidebarLink 
                             text="Reviews" 
-                            href="https://www.thecleaningauthority.com/irvine/about-us/reviews/" 
+                            href="/reviews" 
                             target="_blank"
                         />
                         <SidebarLink 
                             text="Own a Franchise" 
-                            href="https://www.thecleaningauthority.com/franchise/?SPPC=Offline&sppccampaignid=383896" 
+                            href="/ownf-franchiese" 
                             target="_blank"
                         />
                     </div>

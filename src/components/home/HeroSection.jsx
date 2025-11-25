@@ -3,7 +3,7 @@ import bgVideo from "../../assets/Cleaning-mp4.mp4"; // Ensure path is correct
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-[600px] overflow-hidden ">
+    <section className="relative w-full h-[420px] overflow-hidden ">
       {/* Background video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover "
