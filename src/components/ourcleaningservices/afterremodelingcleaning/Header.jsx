@@ -1,47 +1,60 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Header = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Intersection Observer to trigger animations when the header section comes into view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
+      { threshold: 0.3 }
+    );
+    const headerSection = document.getElementById("header-section");
+    if (headerSection) observer.observe(headerSection);
+
+    return () => {
+      if (headerSection) observer.unobserve(headerSection);
+    };
+  }, []);
+
   return (
-    <div>
-      <section className="relative w-full pt-17">
-        <div className="w-full flex flex-col md:flex-row items-stretch relative">
-
-          {/* LEFT GREEN PART - Hidden on mobile, visible on md+ screens */}
-         <div
-  className="hidden md:flex bg-[#66a038] items-center justify-center 
-             w-full md:w-[45%] h-32 md:h-40 lg:h-40 
-             z-30 px-6 md:px-12 
-             rounded-xl shadow-xl
-             translate-x-6        /* shifted slightly to right */
-             transition-all duration-500 
-             hover:shadow-2xl hover:scale-[1.04] hover:translate-x-8"
->
-  <h2 className="text-3xl md:text-5xl lg:text-5xl font-bold text-white tracking-wide drop-shadow-lg">
-Post Construction Cleaning
-  </h2>
-</div>
-
-
-          {/* RIGHT IMAGE - Full width on mobile, partial on larger screens */}
-          <div className="w-full md:w-[60%] h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] overflow-hidden relative z-20 md:-mt-16 md:ml-[-8%] order-2 md:order-2 rounded-lg shadow-xl transition-all duration-500 transform hover:scale-105 hover:shadow-2xl">
-            <img
-              src="https://www.thecleaningauthority.com/assets/banner/home-cleaning-2024.2406201049143.jpg"
-              alt="Interior"
-              className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110 hover:translate-x-2 hover:translate-y-2"
-            />
-
-            {/* MOBILE TITLE OVERLAY - Only visible on small screens */}
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center md:hidden">
-              <h2 className="text-4xl font-bold text-white text-center px-4 transition-all duration-500 transform hover:scale-110">
-                One-Time Cleans
-              </h2>
-            </div>
-          </div>
-
+    <section
+      id="header-section"
+      className="relative w-full pt-20 md:pt-28 px-4 md:px-10 overflow-hidden"
+    >
+      <div className="w-full flex flex-col md:flex-row items-center md:items-stretch relative">
+        {/* LEFT GREEN PART - Positioned from left side */}
+        <div
+          className={`hidden md:block bg-[#66a038] w-full md:w-[50%] mt-8 md:mt-20 pt-8 h-32 md:h-[150px] z-30 flex items-center justify-start md:px-12 rounded shadow-lg transform ${
+            isVisible ? "translate-x-0 opacity-100" : "translate-x-20 opacity-0"
+          } transition-all duration-700 ease-out`}
+        >
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-white">
+            Post Construction Cleaning
+          </h2>
         </div>
-      </section>
-    </div>
+
+        {/* RIGHT IMAGE - Positioned to the right side */}
+        <div
+          className={`w-full md:w-[50%] h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] overflow-hidden relative z-20 md:-mt-16 md:ml-[-8%] rounded-lg shadow-xl transform ${
+            isVisible ? "scale-105 opacity-100" : "scale-95 opacity-50"
+          } transition-transform duration-700 ease-in-out`}
+        >
+          <img
+            src="https://www.thecleaningauthority.com/assets/banner/home-cleaning-2024.2406201049143.jpg"
+            alt="Interior"
+            className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+      </div>
+    </section>
   );
-}
+};
 
 export default Header;

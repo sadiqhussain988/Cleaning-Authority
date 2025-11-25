@@ -39,7 +39,7 @@ const Navbar = () => {
       title: "Why Hire Us?",
       link: "/whyhireus",
       dropdown: [
-        { title: "Detail-Clean Rotation System", link: "/detail-clean-rotaion-system" },
+        { title: "Detail-Clean Rotation System", link: "/detail-clean-rotation-system" },
         { title: "Green Cleaning", link: "/green-cleaning" },
         { title: "Satisfaction Guaranteed", link: "/satisfaction-guaranted" },
         { title: "Cleaning Frequencies", link: "/cleaning-frequencies" },
@@ -51,7 +51,7 @@ const Navbar = () => {
     },
     {
       title: "Our Services",
-      link: "/housecleaning",
+      link: "/our-services",
       dropdown: [
         { title: "House Cleaning", link: "/housecleaning" },
         { title: "Apartment Cleaning", link: "/apartmentcleaning" },

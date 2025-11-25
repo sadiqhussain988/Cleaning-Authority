@@ -42,6 +42,7 @@ import OvenCleaning from './pages/cleaningservices/OvenCleaning';
 import RefrigeratorCleaning from './pages/cleaningservices/RefrigeratorCleaning';
 import DetailCleanRotationSystem from './pages/DetailCleanRotationSystem';
 import ChangeLocation from './pages/ChangeLocation'
+import OurServices from './pages/cleaningservices/OurServices'
 
 
 

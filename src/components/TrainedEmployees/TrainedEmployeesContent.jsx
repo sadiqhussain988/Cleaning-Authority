@@ -232,7 +232,7 @@ const TrainedEmployeesContent = () => {
                     in addition to our regular services in order to ensure a complete and
                     thorough clean at all times. All employees at{" "}
                     <Link
-                      to="/locations" 
+                      to="/change-location" 
                       className="text-[#66a038] font-semibold hover:text-[#5a9430] underline transition-colors"
                     >
                       our 225+ franchise locations
