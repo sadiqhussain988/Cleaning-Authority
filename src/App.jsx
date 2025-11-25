@@ -18,7 +18,7 @@ import WhyJoin from "./pages/WhyJoin";
 import Faq from "./pages/Faq";
 import Special from "./pages/SpecialOffer";
 import Print from "./components/specialoffer/Print";
-import CompanyHistory from "./pages/CompanyHistory.JSX";
+import CompanyHistory from "./pages/CompanyHistory";
 import VisionMission from "./pages/VisionMission";
 import Reviews from "./pages/Reviews";
 import OwnFranchise from "./pages/OwnFranchise";
@@ -41,6 +41,7 @@ import WindowWashing from './pages/cleaningservices/WindowWashing';
 import OvenCleaning from './pages/cleaningservices/OvenCleaning';
 import RefrigeratorCleaning from './pages/cleaningservices/RefrigeratorCleaning';
 import DetailCleanRotationSystem from './pages/DetailCleanRotationSystem';
+import ChangeLocation from './pages/ChangeLocation'
 
 
 
@@ -61,10 +62,16 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home/> },
       { path: "/about", element: <About/> },
-      { path: "/companyhistory", element: <CompanyHistory/> },
-      { path: "/visionmission", element: <VisionMission/> },
-      { path: "/ownfranchise", element: <OwnFranchise/> },
+      { path: "/company-history", element: <CompanyHistory/> },
+      { path: "/vision-mishion", element: <VisionMission/> },
       { path: "/reviews", element: <Reviews/> },
+      { path: "/ownf-franchiese", element: <OwnFranchise/> },
+      { path: "/jobs", element: <Job/> },
+      { path: "/jobs/why-join", element: <WhyJoin/> },
+      { path: "/jobs/housecleaners", element: <HouseCleaner/> },
+      { path: "/jobs/team-leaders-trainers", element: <TeamLeader/> },
+      { path: "/jobs/managers", element: <Manager/> },
+      
       { path: "/faq", element: <Faq/> },
       { path: "/special-offers", element: <Special/> },
       { path: "/print", element: <Print/> },
@@ -85,13 +92,14 @@ const router = createBrowserRouter([
       { path: "/the-cleaning-authority-cares", element: <CleaningAuthorityCares/> },
       { path: "/how-to-help", element: <HowToHelp/> },
       { path: "/locally-owned", element: <LocallyOwned/> },
-    
+     
       { path: "/housekeeping", element: <HouseKeeping/> },
       { path: "/after-remodeling-cleaning", element: <AfterRemodelingCleaning/> },
       { path: "/home-disinfection-cleaning", element: <HomeDisinfection/> },
       { path: "/window-washing-cleaning", element: <WindowWashing/> },
       { path: "/oven-cleaning", element: <OvenCleaning/> },
       { path: "/refrigenrator-cleaning", element: <RefrigeratorCleaning/> },
+      { path: "/change-location", element: <ChangeLocation/> },
       
     ],
   },

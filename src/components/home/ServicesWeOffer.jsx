@@ -4,7 +4,7 @@ const ServicesSection = () => {
   const services = [
     {
       title: "House Cleaning & Sanitizing",
-      href: "/our-cleaning-services/house-cleaning-sanitizing/",
+      href: "/housecleaning",
       icon: (
         <svg viewBox="0 0 36 36" role="presentation" className="w-12 h-12">
           <path
@@ -39,7 +39,7 @@ const ServicesSection = () => {
     },
     {
       title: "Apartment Cleaning & Sanitizing",
-      href: "/our-cleaning-services/apartment-cleaning-sanitizing/",
+      href: "/apartmentcleaning",
       icon: (
         <svg viewBox="0 0 36 36" role="presentation" className="w-12 h-12">
           <path
@@ -81,7 +81,7 @@ const ServicesSection = () => {
     },
     {
       title: "Move In / Move Out Cleaning",
-      href: "/our-cleaning-services/move-in-move-out-cleaning/",
+      href: "/moveinmoveout",
       icon: (
         <svg viewBox="0 0 36 36" role="presentation" className="w-12 h-12">
           <path
@@ -117,7 +117,7 @@ const ServicesSection = () => {
     },
     {
       title: "One-Time Cleans",
-      href: "/our-cleaning-services/one-time-cleans/",
+      href: "/onetimeclean",
       icon: (
         <svg viewBox="0 0 36 36" role="presentation" className="w-12 h-12">
           <path
