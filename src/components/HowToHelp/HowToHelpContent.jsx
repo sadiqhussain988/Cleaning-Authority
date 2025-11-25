@@ -60,14 +60,15 @@ const HowToHelpContent = () => {
                 </h2>
               </div>
 
-              {/* Image moved below header */}
-              <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-200">
-                <img
-                  src="/images/TCA-Care.jpg"
-                  alt="The Cleaning Authority Cares"
-                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+             {/* Image moved below header */}
+<div className="rounded-2xl overflow-hidden shadow-lg border border-gray-200 w-full h-48 sm:h-56 md:h-64 lg:h-60">
+  <img
+    src="/images/TCA-Care.jpg"
+    alt="The Cleaning Authority Cares"
+    className="w-full h-full  hover:scale-105 transition-transform duration-500"
+  />
+</div>
+
             </header>
 
             {/* Intro Card */}
@@ -125,7 +126,7 @@ const HowToHelpContent = () => {
                       <img
                         src="/images/TCA-Cares-Bag.jpg"
                         alt="TCA Cares Bag"
-                        className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                        className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                   </div>
