@@ -1884,7 +1884,4 @@ If you are looking for a truly green clean of your whole home, visit The Cleanin
       },
     ],
   },
-
-
-
 ];
