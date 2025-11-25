@@ -46,7 +46,7 @@ const HeroSection = () => {
             to ensure that nothing is missed when your home is thoroughly cleaned.
             As part of our{" "}
             <Link
-              to="/our-cleaning-services"
+              to="/housecleaning"
               className="text-[#66a038] hover:text-[#0079c1] font-semibold transition-all duration-300  animate-linkFade"
             >
               house cleaning services

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ChooseUsSection = () => {
   return (
@@ -45,13 +46,13 @@ const ChooseUsSection = () => {
                   <p className="text-gray-800 font-semibold text-lg mb-3 hover:transform hover:scale-[1.01] transition-transform duration-300">
                     Stop Coming Home to a Second Job! Invest in your free time by using our services. Get started with a personalized estimate!
                   </p>
-                  <a href="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1&s=5&utm_campaign=&utm_source=&utm_medium=&utm_content=&fbclid=&t=888.658.0659&sa=-1737710574" 
+                  <Link to="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1&s=5&utm_campaign=&utm_source=&utm_medium=&utm_content=&fbclid=&t=888.658.0659&sa=-1737710574" 
                      className="inline-flex items-center gap-2 px-6 py-3 bg-[#66a038] text-white font-semibold rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 shadow-md hover:shadow-lg animate-bounce-subtle">
                     Immediate Online Estimate
                     <svg className="w-4 h-4 hover:scale-110 hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -68,10 +69,10 @@ const ChooseUsSection = () => {
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3 group-hover:text-gray-900 transition-colors duration-300">Our Commitment to Quality</h2>
                 <p className="text-gray-600 leading-relaxed text-lg mb-4 group-hover:text-gray-700 transition-colors duration-300">
-                  Our <a href="/why-hire-us-/detail-clean-rotation-system-/" className="text-[#66a038] font-semibold hover:underline hover:text-green-600 transition-all duration-300">Detail-Clean Rotation System</a>® ensures that our work is always high quality. You simply can't underestimate the power of a good clean - but who has time for it? Focus on the things that matter most to you, and let us take care of the cleaning.
+                  Our <Link to ="/detail-clean-rotation-system" className="text-[#66a038] font-semibold hover:underline hover:text-green-600 transition-all duration-300">Detail-Clean Rotation System</Link>® ensures that our work is always high quality. You simply can't underestimate the power of a good clean - but who has time for it? Focus on the things that matter most to you, and let us take care of the cleaning.
                 </p>
                 <p className="text-gray-600 leading-relaxed text-lg group-hover:text-gray-700 transition-colors duration-300">
-                  Our Professional House Cleaning Checklist ensures we achieve a thorough clean every time. To back this up, we ensure our clients are always happy with our services. There's no risk in choosing us! Learn more about our <a href="/why-hire-us-/satisfaction-guaranteed/" className="text-[#66a038] font-semibold hover:underline hover:text-green-600 transition-all duration-300">satisfaction guarantee</a>.
+                  Our Professional House Cleaning Checklist ensures we achieve a thorough clean every time. To back this up, we ensure our clients are always happy with our services. There's no risk in choosing us! Learn more about our <Link to="/satisfaction-guaranted" className="text-[#66a038] font-semibold hover:underline hover:text-green-600 transition-all duration-300">satisfaction guarantee</Link>.
                 </p>
               </div>
             </div>
@@ -88,7 +89,7 @@ const ChooseUsSection = () => {
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3 group-hover:text-gray-900 transition-colors duration-300">Our Passion for the Environment</h2>
                 <p className="text-gray-600 leading-relaxed text-lg group-hover:text-gray-700 transition-colors duration-300">
-                  Keeping the Earth clean is part of what we care about, so we take steps to <a href="/why-hire-us-/green-cleaning/" className="text-[#66a038] font-semibold hover:underline hover:text-green-600 transition-all duration-300">be environmentally friendly</a>. We're one of the only cleaning companies in North America to use cleaning products that are environmentally responsible or sustainable.
+                  Keeping the Earth clean is part of what we care about, so we take steps to <Link to="/green-cleaning" className="text-[#66a038] font-semibold hover:underline hover:text-green-600 transition-all duration-300">be environmentally friendly</Link>. We're one of the only cleaning companies in North America to use cleaning products that are environmentally responsible or sustainable.
                 </p>
               </div>
             </div>
@@ -105,13 +106,13 @@ const ChooseUsSection = () => {
                   <p className="text-gray-800 font-semibold text-lg mb-3 hover:transform hover:scale-[1.01] transition-transform duration-300">
                     Get an Impeccable Clean. Our Detail-Clean Rotation System® has been proven to be effective in over 20 million cleans.
                   </p>
-                  <a href="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1&s=5&utm_campaign=&utm_source=&utm_medium=&utm_content=&fbclid=&t=888.658.0659&sa=-1737710574"
+                  <Link to="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1&s=5&utm_campaign=&utm_source=&utm_medium=&utm_content=&fbclid=&t=888.658.0659&sa=-1737710574"
                      className="inline-flex items-center gap-2 px-6 py-3 bg-[#66a038] text-white font-semibold rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 shadow-md hover:shadow-lg animate-bounce-subtle">
                     Get a Free Price Estimate
                     <svg className="w-4 h-4 hover:scale-110 hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -125,23 +126,23 @@ const ChooseUsSection = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-4 border-b border-gray-200 hover:text-gray-700 transition-colors duration-300">Why Hire Us?</h2>
             <ul className="space-y-0">
               {[
-                { href: "/why-hire-us-/detail-clean-rotation-system/", text: "Detail-Clean Rotation System" },
-                { href: "/why-hire-us-/green-cleaning/", text: "Green Cleaning" },
-                { href: "/why-hire-us-/satisfaction-guaranteed/", text: "Satisfaction Guaranteed" },
-                { href: "/why-hire-us-/cleaning-frequencies/", text: "Cleaning Frequencies" },
-                { href: "/why-hire-us-/bonded-insured/", text: "Bonded & Insured" },
-                { href: "/why-hire-us-/professionally-trained-employees/", text: "Fully Trained Employees" },
-                { href: "/why-hire-us-/mytca-app/", text: "MyTCA App" },
-                { href: "/cares/", text: "The Cleaning Authority CARES" }
+                { href: "/detail-clean-rotation-system", text: "Detail-Clean Rotation System" },
+                { href: "/green-cleaning", text: "Green Cleaning" },
+                { href: "/satisfaction-guaranted", text: "Satisfaction Guaranteed" },
+                { href: "/cleaning-frequencies", text: "Cleaning Frequencies" },
+                { href: "/bonded-insured", text: "Bonded & Insured" },
+                { href: "/fully-trained-employees", text: "Fully Trained Employees" },
+                { href: "/mytca-app", text: "MyTCA App" },
+                { href: "/the-cleaning-authority-cares", text: "The Cleaning Authority CARES" }
               ].map((item, index) => (
                 <li key={index}>
-                  <a href={item.href} className="flex items-center gap-3 p-3 text-gray-700 hover:text-[#66a038] hover:bg-green-50 hover:transform hover:translate-x-2 hover:scale-[1.02] rounded-lg transition-all duration-300 group">
+                  <Link to={item.href} className="flex items-center gap-3 p-3 text-gray-700 hover:text-[#66a038] hover:bg-green-50 hover:transform hover:translate-x-2 hover:scale-[1.02] rounded-lg transition-all duration-300 group">
                     <div className="w-2 h-2 bg-[#66a038] rounded-full opacity-0 group-hover:opacity-100 group-hover:scale-150 transition-all duration-300"></div>
                     <span className="font-medium group-hover:font-semibold transition-all duration-300">{item.text}</span>
                     <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </a>
+                  </Link >
                 </li>
               ))}
             </ul>
