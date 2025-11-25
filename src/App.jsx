@@ -80,7 +80,7 @@ const router = createBrowserRouter([
       { path: "/moveinmoveout", element: <MoveInMoveOutCleaning/> },
       { path: "/onetimeclean", element: <OneTimeClean/> },
       { path: "/officeclean", element: <OfficeCleaning/> },
-      { path: "/detail-clean-rotaion-system", element: <DetailCleanRotationSystem/> },
+      { path: "/detail-clean-rotation-system", element: <DetailCleanRotationSystem/> },
       { path: "/whyhireus", element: <WhyHireUs/> },
       { path: "/blogpage", element: <BlogPage/> },
       { path: "/bonded-insured", element: <BondedAndInsured/> },

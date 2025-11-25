@@ -2,7 +2,7 @@ import React from 'react'
 
 const LifeShortSection = () => {
   return (
-    <section className='lg:px-20 md:mt-10 mb-2'>
+    <section className='px-2 lg:px-20 md:mt-10 mb-10 mt-6 md:mt-0 md:mb-14'>
       <div className="main relative bg-gradient-to-br from-[#0079c1] to-blue-700 overflow-hidden rounded-2xl shadow-lg p-8 md:p-12 lg:p-16 flex flex-col items-start justify-center text-left border border-blue-200 animate-float-gentle">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-white/5 animate-pulse-slow"></div>

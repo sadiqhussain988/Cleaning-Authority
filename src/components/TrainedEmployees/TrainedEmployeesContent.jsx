@@ -50,7 +50,7 @@ const TrainedEmployeesContent = () => {
                     <p className="text-lg text-gray-700 leading-relaxed">
                       We perform
                       <Link
-                        to="/faqs/" 
+                        to="/faq" 
                         className="mx-1 text-[#66a038] font-semibold hover:text-[#5a9430] underline transition-colors"
                       >
                         ongoing inspections
@@ -92,7 +92,7 @@ const TrainedEmployeesContent = () => {
                     In addition to all of the regular services we provide with every clean,
                     employees of our over 225 franchises provide specialty cleaning services on a{" "}
                     <Link
-                      to="/cleaning-frequencies/" 
+                      to="/cleaning-frequencies" 
                       className="text-[#66a038] font-semibold hover:text-[#5a9430] underline transition-colors"
                     >
                       rotating basis
@@ -154,7 +154,7 @@ const TrainedEmployeesContent = () => {
                       Inside of range hood cleaned, drip pans or glass top surfaces cleaned,
                       doors and door frames hand wiped,{" "}
                       <Link
-                        to="/our-cleaning-services/refrigerator-cleaning/" 
+                        to="/refrigenrator-cleaning" 
                         className="text-[#66a038] font-semibold hover:text-[#5a9430] underline transition-colors"
                       >
                         appliances cleaned and shined
@@ -187,7 +187,7 @@ const TrainedEmployeesContent = () => {
       { href: "/bonded-insured/", text: "Bonded & Insured" },
       { href: "/fully-trained-employees/", text: "Fully Trained Employees", active: true },
       { href: "/mytca-app/", text: "MyTCA App" },
-      { href: "/cleaning-authority-cares/", text: "The Cleaning Authority CARES" }
+      { href: "/the-cleaning-authority-cares/", text: "The Cleaning Authority CARES" }
     ].map((item, index) => (
       <li key={index}>
         <Link
@@ -231,12 +231,12 @@ const TrainedEmployeesContent = () => {
                     These are simply our detail-clean services, performed on a rotating basis
                     in addition to our regular services in order to ensure a complete and
                     thorough clean at all times. All employees at{" "}
-                    <a 
-                      href="/locations/" 
+                    <Link
+                      to="/locations" 
                       className="text-[#66a038] font-semibold hover:text-[#5a9430] underline transition-colors"
                     >
                       our 225+ franchise locations
-                    </a>{" "}
+                    </Link>{" "}
                     are fully-trained in all of these tasks to ensure adherence to quality
                     standards.
                   </p>
