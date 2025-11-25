@@ -66,8 +66,7 @@ const Navbar = () => {
         { title: "Refrigerator Cleaning", link: "/refrigenrator-cleaning" },
       ],
     },
-    { title: "Blog", link: "/blogpage" },
-
+    // { title: "Blog", link: "/blogpage" },
     { title: "Blog", link: "/blog" },
     { title: "FAQs", link: "/faq" },
     { title: "Jobs", link: "/cleaning-jobs/" },
