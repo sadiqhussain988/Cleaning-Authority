@@ -126,7 +126,7 @@ function Footer() {
                 <li><a href="/irvine/about-us/reviews/" className="text-gray-300 hover:text-white quick-link">Reviews</a></li>
                 <li><a href="/franchise/?SPPC=Offline&sppccampaignid=383896" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white quick-link">Own a Franchise</a></li>
                 <li><a href="https://myaccount.thecleaningauthority.com/Account/Login?locationId=274" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white quick-link">MyTCA Account</a></li>
-                <li><a href="https://gifts.thecleaningauthority.com/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white quick-link">Gift Certificates</a></li>
+               
                 <li><a href="/our-family/" className="text-gray-300 hover:text-white quick-link">Our Brand Family</a></li>
               </ul>
             </div>

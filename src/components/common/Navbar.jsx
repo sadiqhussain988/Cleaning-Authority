@@ -29,24 +29,24 @@ const Navbar = () => {
       title: "About Us",
       link: "/about",
       dropdown: [
-        { title: "Company History", link: "/about-us/company-history/" },
-        { title: "Vision & Mission", link: "/about-us/vision-mission/" },
-        { title: "Reviews", link: "/irvine/about-us/reviews/" },
-        { title: "Own a Franchise", link: "/franchise/", external: true },
+        { title: "Company History", link: "/company-history" },
+        { title: "Vision & Mission", link: "/vision-mishion" },
+        { title: "Reviews", link: "/reviews" },
+        { title: "Own a Franchise", link: "/ownf-franchiese", external: true },
       ],
     },
     {
       title: "Why Hire Us?",
       link: "/whyhireus",
       dropdown: [
-        { title: "Detail-Clean Rotation System", link: "/detailrotaion" },
-        { title: "Green Cleaning", link: "/greencleaning" },
-        { title: "Satisfaction Guaranteed", link: "/satisfaction" },
-        { title: "Cleaning Frequencies", link: "/cleaningfrequencies" },
-        { title: "Bonded & Insured", link: "/bondedinsured" },
-        { title: "Fully Trained Employees", link: "/professionally-trained-employees/" },
-        { title: "MyTCA App", link: "/mytca-app/" },
-        { title: "The Cleaning Authority CARES", link: "/cares/" },
+        { title: "Detail-Clean Rotation System", link: "/detail-clean-rotaion-system" },
+        { title: "Green Cleaning", link: "/green-cleaning" },
+        { title: "Satisfaction Guaranteed", link: "/satisfaction-guaranted" },
+        { title: "Cleaning Frequencies", link: "/cleaning-frequencies" },
+        { title: "Bonded & Insured", link: "/bonded-insured" },
+        { title: "Fully Trained Employees", link: "/fully-trained-employees" },
+        { title: "MyTCA App", link: "/mytca-app" },
+        { title: "The Cleaning Authority CARES", link: "/the-cleaning-authority-cares" },
       ],
     },
     {
@@ -69,7 +69,7 @@ const Navbar = () => {
     // { title: "Blog", link: "/blogpage" },
     { title: "Blog", link: "/blog" },
     { title: "FAQs", link: "/faq" },
-    { title: "Jobs", link: "/cleaning-jobs/" },
+    { title: "Jobs", link: "/jobs" },
     { title: "Special Offers", link: "/special-offers" },
   ];
 
@@ -344,7 +344,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center space-x-6">
             <Link 
-              to="/irvine/" 
+              to="/" 
               className="flex-shrink-0" 
               onClick={closeDropdowns}
               aria-label="The Cleaning Authority Home"

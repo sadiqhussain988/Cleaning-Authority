@@ -11,16 +11,7 @@ const CleaningContent = () => {
     "One-Time Cleans"
   ];
 
-  const sideNavItems = [
-    "Detail-Clean Rotation System",
-    "Green Cleaning",
-    "Satisfaction Guaranteed",
-    "Cleaning Frequencies",
-    "Bonded & Insured",
-    "Fully Trained Employees",
-    "MyTCA App",
-    "The Cleaning Authority CARES"
-  ];
+ 
 
   return (
     <div className="w-full bg-white py-16">
@@ -43,9 +34,9 @@ const CleaningContent = () => {
                   Our expert cleaning services are offered in different frequencies, allowing
                   you to choose the program that best suits your needs! Please browse through
                   our website to learn about the
-                  <a href="/our-cleaning-services/house-cleaning/" className="text-[#0079C1] hover:text-[#005a8c] font-semibold ml-1 transition-colors duration-200">
+                  <Link to="/housecleaning" className="text-[#0079C1] hover:text-[#005a8c] font-semibold ml-1 transition-colors duration-200 hover:underline">
                     house cleaning services
-                  </a> that we offer and the various packages provided by our residential cleaning company.
+                  </Link> that we offer and the various packages provided by our residential cleaning company.
                 </p>
                 
                 <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-gray-300">
@@ -83,15 +74,21 @@ const CleaningContent = () => {
                   Our Detail-Clean Rotation System<span className="text-[#001D35]">®</span> Gets the Job Done!
                 </h2>
                 
-                <div className="bg-blue-50 rounded-xl p-6 mb-6 border-l-4 border-[#0079C1]">
-                  <p className="text-lg text-gray-800 leading-relaxed">
-                    We use our Detail-Clean Rotation System<span className="text-[#001D35]">®</span> that has been honed over decades in order to ensure that our clients enjoy beautiful, clean homes after every visit.
-                  </p>
-                </div>
+               <div className="bg-blue-50 rounded-xl p-6 mb-6 border-l-4 border-[#0079C1] relative overflow-hidden">
+  {/* Leaf decoration */}
+ <div className="absolute top-2 right-4 opacity-80">
+  <svg className="w-16 h-16" fill="#66a038" viewBox="0 0 24 24">
+    <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 2 11.5 2 13.5C2 15.5 3.75 17.25 3.75 17.25C7 8 17 8 17 8Z"/>
+  </svg>
+</div>
+  <p className="text-lg text-gray-800 leading-relaxed relative z-10">
+    We use our Detail-Clean Rotation System<span className="text-[#001D35]">®</span> that has been honed over decades in order to ensure that our clients enjoy beautiful, clean homes after every visit.
+  </p>
+</div>
                 
                 <p className="text-gray-700 leading-relaxed">
                   With this system, your house enjoys a total detail-clean within the first two visits. Then, we maintain this pristine clean with each visit. On the first clean, we'll clean your home and provide special attention to your kitchen and bathrooms. On the second clean, we'll thoroughly clean your entire house, with{" "}
-                  <Link  to="/detail-clean-rotation-system" className="text-[#0079C1] hover:text-[#005a8c] font-semibold transition-colors duration-200">
+                  <Link  to="/detail-clean-rotation-system" className="text-[#0079C1] hover:text-[#005a8c] font-semibold transition-colors duration-200 hover:underline">
                     detail-clean services
                   </Link> for your living and sleeping areas. We maintain this thorough level of clean with detail cleaning on a rotating basis.
                 </p>
@@ -104,7 +101,7 @@ const CleaningContent = () => {
                 
                 <p className="text-gray-700 leading-relaxed mb-6">
                   Our company was founded in 1977. We are trusted by our clients nationwide, and we have a reputation for{" "}
-                  <Link to="/satisfaction-guaranteed/" className="text-[#0079C1] hover:text-[#005a8c] font-semibold transition-colors duration-200">
+                  <Link to="/satisfaction-guaranted" className="text-[#0079C1] hover:text-[#005a8c] font-semibold transition-colors duration-200 hover:underline">
                     customer satisfaction
                   </Link> and for excellent service. <strong className="font-semibold text-gray-900">There's nothing better than a clean house, but who has time for cleaning?</strong> Our team of experts takes care of all the details, so you can enjoy a clean house while focusing on the things that matter most.
                 </p>
@@ -136,26 +133,53 @@ const CleaningContent = () => {
               </header>
               
               <nav className="p-4">
-                <ul className="space-y-2">
-                  {sideNavItems.map((item, index) => (
-                    <li key={index}>
-                      <Link
-                        to={`/${item.toLowerCase().replace(/\s+/g, '-').replace(/[&]/g, '')}/`}
-                        className={`flex items-center justify-between p-4 rounded-lg transition-all duration-200 ${
-                          item === "Cleaning Frequencies" 
-                            ? "bg-gradient-to-r from-[#66a038] to-[#5a943f] text-white shadow-sm" 
-                            : "text-gray-700 hover:bg-gray-50 hover:text-[#0079C1] border border-gray-100"
-                        }`}
-                      >
-                        <span className="font-medium">{item}</span>
-                        <svg className={`w-4 h-4 ${item === "Cleaning Frequencies" ? "text-white" : "text-gray-400"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
+  <ul className="divide-y divide-gray-100">
+    {[
+      { href: "/detail-clean-rotation-system", text: "Detail Clean Rotation System" },
+      { href: "/green-cleaning", text: "Green Cleaning" },
+      { href: "/satisfaction-guaranted", text: "Satisfaction Guaranteed" },
+      { href: "/cleaning-frequencies", text: "Cleaning Frequencies" , current: true },
+      { href: "/bonded-insured", text: "Bonded & Insured" },
+      { href: "/fully-trained-employees", text: "Fully Trained Employees" },
+      { href: "/mytca-app", text: "MyTCA App" },
+      { href: "/the-cleaning-authority-cares", text: "The Cleaning Authority CARES" }
+    ].map((item, index) => (
+      <li
+        key={index}
+        className={`transition-all duration-300 group 
+          hover:bg-gradient-to-r hover:from-green-50 hover:to-blue-50
+          ${item.current ? "bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-[#66a038]" : ""}
+        `}
+      >
+        <Link
+          to={item.href}
+          className="flex items-center justify-between px-6 py-4 text-gray-700 hover:text-[#66a038] transition-all duration-300 group-hover:pl-8"
+        >
+          {/* Text */}
+          <span className={`${item.current ? "font-semibold text-[#66a038]" : "font-medium"}`}>
+            {item.text}
+          </span>
+
+          {/* Arrow */}
+          <svg
+            className="w-4 h-4 text-gray-400 transform group-hover:translate-x-1 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </Link>
+      </li>
+    ))}
+  </ul>
+</nav>
+
             </aside>
 
             {/* CTA Card */}

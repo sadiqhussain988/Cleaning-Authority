@@ -52,7 +52,7 @@ export default function LocallyOwnedContent() {
                 has been proven effective in over 20 million cleans.
               </p>
               <Link
-                to="/detail-clean-rotation-system-/"
+                to="/detail-clean-rotation-system"
                 className="inline-block mt-4 px-6 py-3 bg-[#66a038] text-white rounded-lg font-semibold hover:bg-green-700 hover:scale-105 transition-all duration-300"
               >
                 Always Get a Detail-Cleaned Home
