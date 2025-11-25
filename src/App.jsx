@@ -100,6 +100,9 @@ const router = createBrowserRouter([
       { path: "/oven-cleaning", element: <OvenCleaning/> },
       { path: "/refrigenrator-cleaning", element: <RefrigeratorCleaning/> },
       { path: "/change-location", element: <ChangeLocation/> },
+      { path: "/blog", element: <BlogPage /> },               // All blogs
+      { path: "/blog/:category", element: <BlogPage /> },     // Optional: category view
+      { path: "/blog/:category/:slug", element: <BlogPage /> }, // Blog detail
       
     ],
   },
@@ -112,3 +115,5 @@ function App () {
 }
 
 export default App
+
+
