@@ -31,7 +31,7 @@ const InsuredContent = () => {
               </div>
               <div>
                 <p className="text-gray-600 leading-relaxed text-lg group-hover:text-gray-700 transition-colors duration-300">
-                  Our company is fully bonded and insured, which means you can have peace of mind when you hire us as your <a href="/our-cleaning-services/" className="text-blue-600 font-semibold hover:underline hover:text-blue-700 transition-all duration-300">cleaning company</a>. Helping our customers feel confident in our services is very important to us, which is why we're committed to taking every step necessary to make sure they feel good about choosing The Cleaning Authority.
+                  Our company is fully bonded and insured, which means you can have peace of mind when you hire us as your <Link to="/housecleaning" className="text-blue-600 font-semibold hover:underline hover:text-blue-700 transition-all duration-300">cleaning company</Link>. Helping our customers feel confident in our services is very important to us, which is why we're committed to taking every step necessary to make sure they feel good about choosing The Cleaning Authority.
                 </p>
               </div>
             </div>
@@ -108,7 +108,7 @@ const InsuredContent = () => {
                       content: <>
                         <strong>We use a proven cleaning system, specialized to suit our clients' needs.</strong>
                         You can have confidence in getting a job well done because we use a highly specialized system. Our{" "}
-                        <Link to="/detail-clean-rotation-system/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
+                        <Link to="/detail-clean-rotation-system" className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
                           Detail-Clean Rotation System
                         </Link>
                         ® is thorough and proven.
@@ -158,14 +158,14 @@ const InsuredContent = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-4 border-b border-gray-200 hover:text-gray-700 transition-colors duration-300">Why Hire Us?</h2>
             <ul className="space-y-0">
               {[
-                { href: "/detail-clean-rotation-system/", text: "Detail-Clean Rotation System" },
-                { href: "/green-cleaning/", text: "Green Cleaning" },
-                { href: "/satisfaction-guaranteed/", text: "Satisfaction Guaranteed" },
-                { href: "/cleaning-frequencies/", text: "Cleaning Frequencies" },
-                { href: "/bonded-insured/", text: "Bonded & Insured", current: true },
-                { href: "/fully-trained-employees/", text: "Fully Trained Employees" },
-                { href: "/mytca-app/", text: "MyTCA App" },
-                { href: "/the-cleaning-authority-cares/", text: "The Cleaning Authority CARES" }
+                { href: "/detail-clean-rotation-system", text: "Detail-Clean Rotation System" },
+                { href: "/green-cleaning", text: "Green Cleaning" },
+                { href: "/satisfaction-guaranted", text: "Satisfaction Guaranteed" },
+                { href: "/cleaning-frequencies", text: "Cleaning Frequencies" },
+                { href: "/bonded-insured", text: "Bonded & Insured", current: true },
+                { href: "/fully-trained-employees", text: "Fully Trained Employees" },
+                { href: "/mytca-app", text: "MyTCA App" },
+                { href: "/the-cleaning-authority-cares", text: "The Cleaning Authority CARES" }
               ].map((item, index) => (
                 <li key={index}>
                   <Link to={item.href} className={`flex items-center gap-3 p-3 rounded-lg transition-all duration-300 group ${

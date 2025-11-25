@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 const SatisfactionContent = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sideLinks = [
-    { title: "Detail-Clean Rotation System", href: "/detail-clean-rotation-system/" },
-    { title: "Green Cleaning", href: "/green-cleaning/" },
-    { title: "Satisfaction Guaranteed", href: "/satisfaction-guaranteed/" },
-    { title: "Cleaning Frequencies", href: "/cleaning-frequencies/" },
-    { title: "Bonded & Insured", href: "/bonded-insured/" },
+    { title: "Detail Clean Rotation System", href: "/detail-clean-rotation-system" },
+    { title: "Green Cleaning", href: "/green-cleaning" },
+    { title: "Satisfaction Guaranteed", href: "/satisfaction-guaranted" },
+    { title: "Cleaning Frequencies", href: "/cleaning-frequencies" },
+    { title: "Bonded & Insured", href: "/bonded-insured" },
     { title: "Fully Trained Employees", href: "/fully-trained-employees" },
-    { title: "MyTCA App", href: "/mytca-app/" },
+    { title: "MyTCA App", href: "/mytca-app" },
     { title: "The Cleaning Authority CARES", href: "/the-cleaning-authority-cares" },
   ];
 
@@ -50,9 +50,10 @@ const SatisfactionContent = () => {
               <div className={`space-y-4 sm:space-y-6 transform transition-all duration-700 delay-100 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                 <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
                   The experts at The Cleaning Authority are committed to providing thorough house cleaning services for our valued customers nationwide. In order to accomplish this goal, we adhere to strict standards that remain consistent across the board. Learn more about the steps we take to ensure that our clients are satisfied with our{" "}
-                  <a href="/our-cleaning-services/house-cleaning/" className="text-[#66a038] hover:text-[#558c2d] font-semibold underline transition-colors duration-200">
+                  <Link
+                  to="/housecleaning" className="text-[#66a038] hover:text-[#558c2d] font-semibold underline transition-colors duration-200">
                     home cleaning services
-                  </a>.
+                  </Link>.
                 </p>
                 
                 <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-[#66a038] p-4 sm:p-6 rounded-r-lg sm:rounded-r-xl shadow-sm">
@@ -136,7 +137,7 @@ const SatisfactionContent = () => {
                         </p>
                         <p className="text-green-700 text-base sm:text-lg">
                           Our team proudly uses residential cleaning solutions that are environmentally responsible.{" "}
-                          <Link to="/green-cleaning/" className="text-[#66a038] hover:text-green-800 font-semibold underline transition-colors duration-200">
+                          <Link to="/green-cleaning" className="text-[#66a038] hover:text-green-800 font-semibold underline transition-colors duration-200">
                             About Our Eco-Friendly Methods
                           </Link>
                         </p>
@@ -150,14 +151,14 @@ const SatisfactionContent = () => {
                   <div className="max-w-3xl mx-auto">
                     <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-5">Ready to Experience the Difference?</h3>
                     <p className="text-[#66a038] font-bold text-lg sm:text-xl mb-4 sm:mb-6 leading-7 sm:leading-8">
-                      Call The Cleaning Authority at <a href="tel:1-(949) 990-5795" className="text-green-800 hover:text-green-900 underline transition-colors duration-200 font-bold">(949) 990-5795</a> or{" "}
-                      <a 
-                        href="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1" 
+                      Call The Cleaning Authority at (949) 990-5795 or{" "}
+                      <Link
+                        to="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1" 
                         target="_blank" 
                         className="text-blue-600 hover:text-blue-800 underline transition-colors duration-200 font-bold"
                       >
                         get your immediate online estimate
-                      </a> today.
+                      </Link> today.
                     </p>
                     <p className="text-gray-600 font-semibold text-base sm:text-lg">The Cleaning Authority is ready to help!</p>
                   </div>
@@ -241,7 +242,7 @@ const SatisfactionContent = () => {
                     From there, we continue on with a system that ensures that your house maintains a detail level of clean at all times, with detailed services performed on a rotating basis.
                   </p>
                   <p className="leading-7 sm:leading-8">
-                    You can rely on us, because we've proven our commitment to our clients. We have 25+ years of experience and a nationwide reputation for excellence. With house cleaning franchises in 225+ locations in the U.S. and Canada, our brand is well known and trusted.
+                    You can rely on us, because we've proven our link <Link to="/vision-mishion"><span className='text-[#66a038] font-semibold hover:underline hover:text-[#0079c1]'>commitment to our clients</span></Link> . We have 25+ years of experience and a nationwide reputation for excellence. With house cleaning franchises in 225+ locations in the U.S. and Canada, our brand is well known and trusted.
                   </p>
                 </div>
               </div>
@@ -257,8 +258,8 @@ const SatisfactionContent = () => {
                   <div className="flex-1">
                     <p className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Save Time. Save Money.</p>
                     <p className="text-blue-100 mb-4 sm:mb-6 text-base sm:text-lg">Get your free estimate today and experience the difference.</p>
-                    <a
-                      href="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1"
+                    <Link
+                      to="https://tca.thecleaningauthority.com/Redirect.aspx?d=2&f=274&c=1"
                       target="_blank"
                       className="inline-flex items-center justify-center w-full px-4 sm:px-6 py-3 sm:py-4 bg-white text-[#66a038] font-semibold rounded-lg sm:rounded-xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-md sm:shadow-lg group text-sm sm:text-base"
                     >
@@ -266,7 +267,7 @@ const SatisfactionContent = () => {
                       <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-3 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

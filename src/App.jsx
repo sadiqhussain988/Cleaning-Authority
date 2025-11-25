@@ -81,7 +81,7 @@ const router = createBrowserRouter([
       { path: "/moveinmoveout", element: <MoveInMoveOutCleaning/> },
       { path: "/onetimeclean", element: <OneTimeClean/> },
       { path: "/officeclean", element: <OfficeCleaning/> },
-      { path: "/detail-clean-rotaion-system", element: <DetailCleanRotationSystem/> },
+      { path: "/detail-clean-rotation-system", element: <DetailCleanRotationSystem/> },
       { path: "/whyhireus", element: <WhyHireUs/> },
       { path: "/blogpage", element: <BlogPage/> },
       { path: "/bonded-insured", element: <BondedAndInsured/> },
@@ -101,7 +101,9 @@ const router = createBrowserRouter([
       { path: "/oven-cleaning", element: <OvenCleaning/> },
       { path: "/refrigenrator-cleaning", element: <RefrigeratorCleaning/> },
       { path: "/change-location", element: <ChangeLocation/> },
-      { path: "/our-services", element: <OurServices/> },
+      { path: "/blog", element: <BlogPage /> },               // All blogs
+      { path: "/blog/:category", element: <BlogPage /> },     // Optional: category view
+      { path: "/blog/:category/:slug", element: <BlogPage /> }, // Blog detail
       
     ],
   },
@@ -114,3 +116,5 @@ function App () {
 }
 
 export default App
+
+
