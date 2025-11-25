@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaChartLine, FaDollarSign, FaUsers } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const BusinessFranchise = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
-    <section className="py-20 px-6 md:px-20 bg-gray-50">
+    <section className="py-15 md:py-20 px-5 md:px-20 bg-gray-50">
       <div className="max-w-7xl mx-auto text-center">
 
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold text-[#0079C1] mb-6">
+        <h2 
+          className="text-3xl md:text-5xl font-bold text-[#0079C1] mb-6"
+          data-aos="fade-down"
+        >
           Elevate Your Future with Our Leading Cleaning Business Franchise!
         </h2>
 
         {/* Description */}
-        <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-16 leading-relaxed">
+        <p 
+          className="text-lg text-gray-700 max-w-3xl mx-auto mb-16 leading-relaxed"
+          data-aos="fade-up"
+        >
           The Cleaning Authority has helped over 225 individuals across North America achieve their dreams of successful franchise ownership. 
           If you’re looking for an <b>affordable cleaning franchise, we’re here to support you every step of the way.</b> 
           No matter where you plan to run your business, our experienced team is ready to guide you toward success. Explore our cleaning franchise for sale and take the first step toward building a thriving business.
@@ -22,7 +34,10 @@ const BusinessFranchise = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
 
           {/* Card 1 */}
-          <div className="p-8 bg-[#E5F1F9] rounded-3xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+          <div 
+            className="p-8 bg-[#E5F1F9] rounded-3xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+            data-aos="fade-right"
+          >
             <div className="text-[#4fa33a] text-5xl mb-4 flex justify-center animate-bounce">
               <FaChartLine />
             </div>
@@ -35,7 +50,10 @@ const BusinessFranchise = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="p-8 bg-[#F1F9EC] rounded-3xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+          <div 
+            className="p-8 bg-[#F1F9EC] rounded-3xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+            data-aos="fade-up"
+          >
             <div className="text-[#4fa33a] text-5xl mb-4 flex justify-center animate-bounce">
               <FaDollarSign />
             </div>
@@ -48,7 +66,10 @@ const BusinessFranchise = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="p-8 bg-[#E5F1F9] rounded-3xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+          <div 
+            className="p-8 bg-[#E5F1F9] rounded-3xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+            data-aos="fade-left"
+          >
             <div className="text-[#4fa33a] text-5xl mb-4 flex justify-center animate-bounce">
               <FaUsers />
             </div>
@@ -63,7 +84,7 @@ const BusinessFranchise = () => {
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center" data-aos="fade-up">
           <button className="px-10 py-4 bg-[#0079C1] text-white rounded-md font-semibold hover:bg-[#005f94] transition shadow-md hover:shadow-lg">
             Explore Available Markets
           </button>
