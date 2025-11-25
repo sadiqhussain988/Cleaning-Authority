@@ -51,7 +51,7 @@ const Navbar = () => {
     },
     {
       title: "Our Services",
-      link: "/housecleaning",
+      link: "/our-services",
       dropdown: [
         { title: "House Cleaning", link: "/housecleaning" },
         { title: "Apartment Cleaning", link: "/apartmentcleaning" },

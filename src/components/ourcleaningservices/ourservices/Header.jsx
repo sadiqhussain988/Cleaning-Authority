@@ -31,12 +31,12 @@ const Header = () => {
       <div className="w-full flex flex-col md:flex-row items-center md:items-stretch relative">
         {/* LEFT GREEN PART - Positioned from left side */}
         <div
-          className={`hidden md:block bg-[#66a038] w-full md:w-[50%] mt-8 md:mt-20 pt-8 h-32 md:h-[150px] z-30 flex items-center justify-start md:px-12 rounded shadow-lg transform ${
+          className={`hidden md:block bg-[#66a038] w-full md:w-[50%] mt-8 md:mt-20 pt-8 h-32 md:h-[130px] z-30 flex items-center justify-start md:px-12 rounded shadow-lg transform ${
             isVisible ? "translate-x-0 opacity-100" : "translate-x-20 opacity-0"
           } transition-all duration-700 ease-out`}
         >
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-white">
-            Move In Move Out Cleaning
+            Our Cleaning Services
           </h2>
         </div>
 
@@ -47,7 +47,7 @@ const Header = () => {
           } transition-transform duration-700 ease-in-out`}
         >
           <img
-            src="https://www.thecleaningauthority.com/assets/banner/general.2012151513550.jpg"
+            src="https://www.thecleaningauthority.com/assets/banner/TCA-5.2012151738550.jpg"
             alt="Interior"
             className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105"
           />

@@ -42,6 +42,7 @@ import OvenCleaning from './pages/cleaningservices/OvenCleaning';
 import RefrigeratorCleaning from './pages/cleaningservices/RefrigeratorCleaning';
 import DetailCleanRotationSystem from './pages/DetailCleanRotationSystem';
 import ChangeLocation from './pages/ChangeLocation'
+import OurServices from './pages/cleaningservices/OurServices'
 
 
 
@@ -100,6 +101,7 @@ const router = createBrowserRouter([
       { path: "/oven-cleaning", element: <OvenCleaning/> },
       { path: "/refrigenrator-cleaning", element: <RefrigeratorCleaning/> },
       { path: "/change-location", element: <ChangeLocation/> },
+      { path: "/our-services", element: <OurServices/> },
       
     ],
   },
