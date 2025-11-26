@@ -43,6 +43,9 @@ import RefrigeratorCleaning from './pages/cleaningservices/RefrigeratorCleaning'
 import DetailCleanRotationSystem from './pages/DetailCleanRotationSystem';
 import ChangeLocation from './pages/ChangeLocation'
 import OurServices from './pages/cleaningservices/OurServices'
+import BasementCleaning from './pages/cleaningservices/BasementCleaning'
+import CarpetCleaning from './pages/cleaningservices/CarpetCleaning'
+import CommercialCleaning from './pages/cleaningservices/CommercialCleaning'
 
 
 
@@ -105,6 +108,9 @@ const router = createBrowserRouter([
       { path: "/blog", element: <BlogPage /> },               // All blogs
       { path: "/blog/:category", element: <BlogPage /> },     // Optional: category view
       { path: "/blog/:category/:slug", element: <BlogPage /> }, // Blog detail
+      { path: "/basement-cleaning", element: <BasementCleaning /> }, 
+      { path: "/carpet-cleaning", element: <CarpetCleaning /> }, 
+      { path: "/commercial-cleaning", element: <CommercialCleaning /> }, 
       
     ],
   },

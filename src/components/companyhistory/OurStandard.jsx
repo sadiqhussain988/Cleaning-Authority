@@ -30,10 +30,10 @@ const Card = ({ title, items }) => {
 const OurStandard = () => {
   const firstCardItems = [
     { name: "Apartment Cleanings", link: "/apartmentcleaning" },
-    { name: "Carpet Cleaning", link: "https://www.thecleaningauthority.com/our-cleaning-services/carpet-cleaning/" },
+    { name: "Carpet Cleaning", link: "/carpet-cleaning" },
     { name: "Clean Up After Remodeling", link: "/after-remodeling-cleaning" },
-    { name: "Basement Cleaning", link: "https://www.thecleaningauthority.com/our-cleaning-services/basement-cleaning/" },
-    { name: "Commercial Cleaning", link: "https://www.thecleaningauthority.com/our-cleaning-services/commercial-cleaning/" },
+    { name: "Basement Cleaning", link: "/basement-cleaning" },
+    { name: "Commercial Cleaning", link: "/commercial-cleaning" },
     { name: "Office Cleaning", link: "/officeclean" },
     { name: "Green Cleaning", link: "/green-cleaning" },
   ];
